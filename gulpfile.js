@@ -18,23 +18,23 @@ var gulp           = require('gulp'),
 
 gulp.task('common-js', function() {
 	return gulp.src([
-		'500303_GULP/script/2gis.js',
-		'500303_GULP/script/myscript.js',
+		'app/script/2gis.js',
+		'app/script/myscript.js',
 		])
 	.pipe(concat('common.min.js'))
 	.pipe(uglify())
-	.pipe(gulp.dest('500303_GULP/script'));
+	.pipe(gulp.dest('app/script'));
 });
 
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
-		'500303_GULP/libs/jquery/dist/jquery.min.js',
-		'500303_GULP/libs/modernizr/modernizr-custom.js',
-		'500303_GULP/script/common.min.js', // Всегда в конце
+		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/modernizr/modernizr-custom.js',
+		'app/script/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Минимизировать весь js (на выбор)
-	.pipe(gulp.dest('500303_GULP/script'))
+	.pipe(gulp.dest('app/script'))
 	.pipe(browserSync.reload({stream: true}));
 });
 
@@ -60,27 +60,27 @@ gulp.task('browser-sync',['js','sass'], function() {
 	.pipe(browserSync.reload({stream: true}));
 });*/
 gulp.task('sass', function () {
-	return gulp.src('500303_GULP/scss/*.scss') //берем какие-нибудь файлы, и возвращаем
+	return gulp.src('app/scss/*.scss') //берем какие-нибудь файлы, и возвращаем
 				.pipe(sass()) // вызов како-то команды, плагина,
 				.pipe(autoprefixer(['last 15 versions','> 1%','ie 8','ie 7'],{cascade:true}))
-				.pipe(gulp.dest('500303_GULP/css')) //выгружаем работу плагина
+				.pipe(gulp.dest('app/css')) //выгружаем работу плагина
 				.pipe(browserSync.reload({stream:true})) //инжектим css
 }); // инструкция, задача
 gulp.task('css-libs',['sass'], function(){
-	return gulp.src(['500303_GULP/css/mystyle.css',])
+	return gulp.src(['app/css/mystyle.css',])
 				.pipe(cssnano())
 				.pipe(rename({suffix:'.min'}))
-				.pipe(gulp.dest('500303_GULP/css'));
+				.pipe(gulp.dest('app/css'));
 });
 gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
-	gulp.watch('500303_GULP/scss/**/*.scss', ['sass']);
-	gulp.watch(['500303_GULP/script/**/*.js', '500303_GULP/script/common.min.js'], ['js']);
+	gulp.watch('app/scss/**/*.scss', ['sass']);
+	gulp.watch(['app/script/**/*.js', 'app/script/common.min.js'], ['js']);
 	//gulp.watch('500303_GULP/*.php', browserSync.reload);
-	gulp.watch('500303_GULP/**/*.php').on('change', browserSync.reload);
+	gulp.watch('app/**/*.php').on('change', browserSync.reload);
 });
 
 gulp.task('imagemin', function() {
-	return gulp.src('500303_GULP/images/**/*')
+	return gulp.src('app/images/**/*')
 	.pipe(cache(imagemin()))
 	.pipe(gulp.dest('dist/images'));
 });
@@ -88,26 +88,26 @@ gulp.task('imagemin', function() {
 gulp.task('build', ['removedist', 'imagemin', 'css-libs', 'js'], function() {
 
 	var buildFiles = gulp.src([
-		'500303_GULP/*.html',
-		'500303_GULP/*.php',
-		'500303_GULP/.htaccess',
+		'app/*.html',
+		'app/*.php',
+		'app/.htaccess',
 		]).pipe(gulp.dest('dist'));
 
 	var buildCss = gulp.src([
-		'500303_GULP/css/mystyle.min.css',
+		'app/css/mystyle.min.css',
 		]).pipe(gulp.dest('dist/css'));
 
 	var buildJs = gulp.src([
-		'500303_GULP/script/scripts.min.js',
-		'500303_GULP/script/form.php',
+		'app/script/scripts.min.js',
+		'app/script/form.php',
 		]).pipe(gulp.dest('dist/script'));
 
 	var buildFonts = gulp.src([
-		'500303_GULP/fonts/**/*',
+		'app/fonts/**/*',
 		]).pipe(gulp.dest('dist/fonts'));
 
 	var buildModules = gulp.src([
-		'500303_GULP/modules/**/*',
+		'app/modules/**/*',
 		]).pipe(gulp.dest('dist/modules'));
 
 });
