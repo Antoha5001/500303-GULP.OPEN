@@ -3,4 +3,5 @@
 /.git/
 /app/css/
 /**/*.psd
+/**/*.ai
 /**/Thumbs.db
