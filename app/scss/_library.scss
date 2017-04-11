@@ -14,7 +14,7 @@ $blue_logo: #00bbff;
 /*#e8fff3 #ecf8f2*/
 
 $image_dir:'../images/';
-$planshet: 910px;
+$planshet: 960px;
 /**/
 
 $phone: 600px;
@@ -39,16 +39,16 @@ $W250: 250px;
 }
 
 @mixin conteiner($background) {
-  margin: 0 auto;
-  position: relative;
+  //margin: 0 auto;
+//  position: relative;
   background: url($image_dir+$background) #fff no-repeat;
   //background-attachment: fixed;
   background-size: contain;
   box-shadow: 0 0 15px #999;
   -webkit-box-shadow: 0 0 15px #999;
-  width: 90%;
+//  width: 90%;
   -moz-box-shadow: 0 0 15px #999;
-  width: 90%;
+//  width: 90%;
 }
 
 @mixin logo($width, $height, $background) {
