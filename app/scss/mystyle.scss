@@ -53,9 +53,9 @@ a {
 .globalwidth {}
 
 .s-conteiner {
-	@include conteiner( 'menu-s.jpg');
+	@include conteiner( 'menu.jpg');
 	@media (max-width: $planshet) and (min-width: 580px) {
-		@include conteiner( 'menu.jpg');
+			@include conteiner( 'menu-s.jpg');
 	}
 }
 
