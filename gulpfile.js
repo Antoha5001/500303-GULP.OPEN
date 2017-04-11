@@ -12,7 +12,8 @@ var gulp           = require('gulp'),
 		cache          = require('gulp-cache'),
 		autoprefixer   = require('gulp-autoprefixer'),
 		ftp            = require('vinyl-ftp'),
-		notify         = require("gulp-notify");
+		notify         = require("gulp-notify"),
+		srv 						= '500303-gulp.open:82';
 
 // Скрипты проекта
 
@@ -64,16 +65,19 @@ gulp.task('sass', function () {
 				.pipe(sass()) // вызов како-то команды, плагина,
 				.pipe(autoprefixer(['last 15 versions','> 1%','ie 8','ie 7'],{cascade:true}))
 				.pipe(gulp.dest('app/css')) //выгружаем работу плагина
-				.pipe(browserSync.reload({stream:true})) //инжектим css
+				.pipe(browserSync.reload({stream:true})); //инжектим css
 }); // инструкция, задача
+
 gulp.task('css-libs',['sass'], function(){
 	return gulp.src(['app/css/mystyle.css',])
 				.pipe(cssnano())
 				.pipe(rename({suffix:'.min'}))
-				.pipe(gulp.dest('app/css'));
+				.pipe(gulp.dest('app/css'))
+				.pipe(browserSync.reload({stream:true}));
 });
-gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
-	gulp.watch('app/scss/**/*.scss', ['sass']);
+
+gulp.task('watch', ['css-libs', 'js', 'browser-sync'], function() {
+	gulp.watch('app/scss/**/*.scss', ['css-libs']);
 	gulp.watch(['app/script/**/*.js', 'app/script/common.min.js'], ['js']);
 	//gulp.watch('500303_GULP/*.php', browserSync.reload);
 	gulp.watch('app/**/*.php').on('change', browserSync.reload);
