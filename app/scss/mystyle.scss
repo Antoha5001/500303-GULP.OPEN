@@ -198,17 +198,18 @@ a {
 .slogan-box {
 	display: flex;
 	flex-direction: column;
-	margin: 40px 0 0;
+	margin: 40px auto 0;
 	@media (min-width: $planshet) {
 		display: flex;
-		margin: 60px 0 0;
+		margin: 60px auto 0;
 		min-height: 160px;
 		align-items: center;
 		justify-content: center;
+		text-align: center;
 	}
 	@media (max-width: $planshet) and (min-width: 580px) {
 		display: flex;
-		margin: 40px 0 0;
+		margin: 40px auto 0;
 		min-height: 160px;
 		align-items: center;
 		justify-content: center;
@@ -246,7 +247,7 @@ a {
 		margin: 60px auto 0px;
 	}
 	@media (max-width: 910px) and (min-width: 580px) {
-		margin: 30px 0 0;
+		margin: 30px auto 0;
 	}
 }
 
@@ -308,42 +309,71 @@ a {
 		background: $lite-green;
 	}*/
 .contacts-box {
+	width: 100%;
+	max-width: none;
 	background: $lite-green;
 	overflow: hidden;
 	margin-top: 0;
+	padding: 0;
+	margin: 0 auto;
 		@media screen and (max-width: $planshet){
 
 		}
 }
 
 .contacts-box__contacts {
-	min-height: 350px;
-	padding: 50px;
-	border: 1px solid black;
+	//min-height: 350px;
+	padding:40px 40px 20px;
+	//border: 1px solid black;
+	@media screen and (max-width:$planshet){
+	padding:20px;
+		
+	}
 }
 
 .contacts-box__zagolovok {
-	@include tsize(25px, $green, 1.5em);
+		@include tsize(2rem, $green, 1.5rem);
+	//	margin-left: 40px;
+		margin-bottom: 0.5rem;
+		//padding-top: 15px;
+		font-weight: bold;
+		text-align: left;
+	@media screen and (max-width:$planshet){
+	@include tsize(1.8rem, $green, 1.5em);
 	//padding-top: 15px;
 	font-weight: bold;
+		text-align: center;
+		margin-bottom: 0;
+		
+	}
 }
 
 .contacts-box__podzagolovok {
-	font-size: 15px;
+		@include tsize(1.2rem, black, 1.8rem);
+		//margin-left: 40px;
+		text-align: left;
+	@media screen and (max-width:$planshet){
+		text-align: center;
+	font-size: 1.3rem;
 	line-height: 1.5em;
+		
+	}
 }
 
 .contacts-box__podzagolovok_bold {
 	font-weight: bold;
 	padding-top: 15px;
+	@media screen and (max-width:$planshet){
+		
+	}
 }
 .contacts-box__social-icons {
 	float: left;
-	border: 1px solid black;
-	width: 40px;
-	height: 40px;
+	//border: 1px solid black;
+	width: 50px;
+	height: 50px;
 	background: none;
-	margin-top: 1.5em;
+	margin: 1.5em 1em 0 0;
 	//margin-left: 40px;
 	transition: all 0.3s;
 	a img{
@@ -356,7 +386,7 @@ a {
 		transform: scale(1.2);
 	}
 	@media (max-width: $planshet) {
-		margin: auto;
+		//margin: auto;
 		margin-top: 1em;
 		margin-bottom: 1em;
 			width: 50px;
@@ -367,7 +397,7 @@ a {
 .contacts-box__maps {
 	height: 400px;
 	padding: 0;
-	margin: 0;
+	margin: 0 auto;
 }
 
 #map {
@@ -378,6 +408,8 @@ a {
 
 /* FOOTER */
 .s-footer {
+	width: 100%;
+	max-width: none;
 	@include footer( 'footer.png');
 	//display: flex;
 	//align-items: center;
@@ -468,25 +500,6 @@ a {
 	}*/
 
 
-	.contacts-box__zagolovok {
-		@include tsize(25px, $green, 1.5em);
-	//	margin-left: 40px;
-		margin-bottom: 1em;
-		//padding-top: 15px;
-		font-weight: bold;
-		text-align: left;
-	}
-
-	.contacts-box__podzagolovok {
-		@include tsize(15px, black, 1.5em);
-		//margin-left: 40px;
-		text-align: left;
-	}
-
-	.contacts-box__podzagolovok_bold {
-		font-weight: bold;
-		padding-top: 15px;
-	}
 
 	.contacts-box__maps {
 		height: 400px;

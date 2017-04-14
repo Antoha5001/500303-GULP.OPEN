@@ -71,7 +71,7 @@ include "modules/form.php";
           </div>
       </div>
       <div class="row contacts-box">
-                  <div class="col col-lg-4 contacts-box__contacts">
+                  <div class="col col-lg-4 col-md-12 contacts-box__contacts">
                       <p class = "contacts-box__zagolovok">
                       Наши контакты</p>
                       <h1 class = "contacts-box__podzagolovok contacts-box__podzagolovok_bold">                        Медицинский центр «ЖИЗНЬ»</h1>
@@ -89,7 +89,7 @@ include "modules/form.php";
                         <a href="https://vk.com/club131352162" target="_blank"><img src="images/vk.svg" alt=""></a>
                       </div>
                   </div>
-                  <div class="col col-lg-8 contacts-box__maps">
+                  <div class="col col-lg-8 col-md-12 contacts-box__maps">
                       <div id="map"></div>
 
                   </div>
