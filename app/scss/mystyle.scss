@@ -2,14 +2,16 @@
 @import "_reset";
 @import "_setka";
 //@import url(reset.css);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700&subset=cyrillic);
-@font-face {
-	font-family: nautilys;
-	src: url("../fonts/nautiluspompilius.ttf");
-	font-weight: 400;
-	font-style: normal;
-}
-
+//@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700&subset=cyrillic);
+//@font-face {
+//	font-family: nautilys;
+	//src: url("../fonts/nautiluspompilius.ttf");
+	//font-weight: 400;
+	//font-style: normal;
+//}
+@include font-face("nautilys", "../fonts/nautiluspompilius");
+@include font-face("Open Sans", "../fonts/OpenSans-Regular");
+@include font-face("Open Sans Bold", "../fonts/OpenSans-Bold");
 * {
 	border: 0;
 }
@@ -97,93 +99,87 @@ a {
 
 /* Contacts in header */
 .phone-top {
-	@media (min-width: $planshet) {
-		display: flex;
-		flex-direction: column;
-		height: 75px;
-		width: 400px;
-		position: relative;
-		top: 40px;
-		right: 40px;
-		text-align: right;
-		float: right;
-	}
-	@media (max-width: 910px) and (min-width: 580px) {
+	width: 400px;
+	margin-top: 40px;
+	margin-right: 40px;
+	text-align: right;
+	float: right;
+	@media screen and (max-width: $planshet){
+		//border: 1px solid black;
+		width: 100%;
+		text-align: center;
+		margin: auto;
+		margin-top: 20px;
 		line-height: 1.8em;
+	}
+	@media screen and (max-width: $phone){
+		margin-top: -22px;
 	}
 }
 
-.phone-top__adres_big{
+.phone-top__title{
+	font-family: "Open Sans Bold",sans-serif;
 	font-size: 18px;
-	@media (max-width: $planshet) {
-	}
-	@media (max-width: 910px) and (min-width: 580px) {
-		font-size: 1.2em;
-	}
-	@media (max-width: 250px) {
-	}
-}
-.phone-top__adres{
-	//font-size: 1em;
-	font-size: 20px;
-	font-weight: bold;
 	color: $green;
-	//color: $blue_logo;
 	@media (max-width: $planshet) {
-		color: $green;
-		font-weight: bold;
+		font-size: 2.2rem;
 	}
-	@media (max-width: 910px) and (min-width: 580px) {
+	@media (max-width: $phone) {
 		font-size: 1.2em;
-		color: $green;
-	}
-	@media (max-width: 250px) {
-		@include tsize(0.9em, $green, 1.2em);
 	}
 }
-.phone-top__adres_relative{
+
+.phone-top__adres{
+	font-family: "Open Sans Bold",sans-serif;
 	margin-top: 15px;
-	position: relative;
 	top: 4px;
+	font-size: 20px;
 	color: $blue_logo;
-	//font-size: 2em;
 	@media (max-width: $planshet) {
+		font-size: 2.4rem;
+		line-height: 2.8rem;
+	}
+	@media (max-width: $phone) {
+		font-size: 1.4rem;
+		line-height: 1.8rem;
 	}
 }
 .phone-top__kod-goroda{
+	font-family: "Open Sans Bold",sans-serif;
 	position: relative;
 	font-size: 1em;
 	font-weight: bold;
 	top: 5px;
 	color: $green;
 	@media (max-width: $planshet) {
-		font-size: 25px;
+		font-size: 3rem;
 		color: $green;
 		font-weight: bold;
+		line-height: 4rem * 1.6;
 	}
-	@media (max-width: 910px) and (min-width: 580px) {
-		font-size: 1.4em;
+	@media (max-width: $phone) {
+		font-size: 1.6rem;
 		font-weight: bold;
 		color: $green;
+		line-height: 1.6rem * 1.6;
 	}
 	@media (max-width: 250px) {
 		@include tsize(0.9em, $green, 1.2em);
-		font-weight: bold;
 	}
 }
 .phone-top__number{
+	font-family: "Open Sans Bold",sans-serif;
 	position: relative;
 	font-size: 40px;
 	color: $green;
 	top: 2px;
 	@media (max-width: $planshet) {
-		position: relative;
+		font-size: 5.2rem;
 		color: $green;
 		top: 2px;
 	}
-	@media (max-width: 910px) and (min-width: 580px) {
-		position: relative;
-		font-size: 1.9em;
+	@media (max-width: $phone){
+		font-size: 2.5rem;
 		color: #60c48f;
 		top: 1px;
 	}
@@ -252,14 +248,31 @@ a {
 }
 
 .price-box__price {
-	@include price(300px, 120px, 'price-s.png');
-	@media (min-width: $planshet) {
+	//@include price(300px, 120px, 'price-s.png');
+		// @include price(550px, 220px, 'price.png');
+		 margin: auto;
+		 width: 100%;
+		 max-width: 550px;
+	/*@media (min-width: $planshet) {
 		 @include price(550px, 220px, 'price.png');
+	}*/
+	img{
+		display: block;
+		max-width: 100%;
+		height: auto;
 	}
-	@media (max-width: $planshet) and (min-width: 580px) {
-		 @include price(470px, 188px, 'price-planshet.png');
+	@media (max-width: $planshet) {
+		// @include price(calc(100% - 80px), 300px, 'price.png');
+		// background-size: contain;
+		// max-width: 550px;
 	}
-	@media (max-width: 380px) {
+	@media (max-width: $phone) {
+		// @include price(calc(100% - 40px), auto, 'price-planshet.png');
+		// background-size: contain;
+		// margin: auto;
+		// max-width: 470px;
+	}
+	/*@media (max-width: 380px) {
 		 @include price(270px, 108px, 'price-ss.png');
 	}
 	@media (max-width: 321px) {
@@ -267,7 +280,7 @@ a {
 	}
 	@media (max-width: 250px) {
 		 @include price(170px, 68px, 'price-vs.png');
-	}
+	}*/
 }
 /*FORMS
 	.form-box{
@@ -323,11 +336,11 @@ a {
 
 .contacts-box__contacts {
 	//min-height: 350px;
-	padding:40px 40px 20px;
+	padding:30px 10px 25px 40px;
 	//border: 1px solid black;
 	@media screen and (max-width:$planshet){
 	padding:20px;
-		
+
 	}
 }
 
@@ -335,6 +348,7 @@ a {
 		@include tsize(2rem, $green, 1.5rem);
 	//	margin-left: 40px;
 		margin-bottom: 0.5rem;
+			font-family: "Open Sans Bold",sans-serif;
 		//padding-top: 15px;
 		font-weight: bold;
 		text-align: left;
@@ -344,7 +358,7 @@ a {
 	font-weight: bold;
 		text-align: center;
 		margin-bottom: 0;
-		
+
 	}
 }
 
@@ -356,41 +370,43 @@ a {
 		text-align: center;
 	font-size: 1.3rem;
 	line-height: 1.5em;
-		
+
 	}
 }
 
 .contacts-box__podzagolovok_bold {
+	font-family: "Open Sans Bold",sans-serif;
 	font-weight: bold;
 	padding-top: 15px;
 	@media screen and (max-width:$planshet){
-		
+
 	}
 }
 .contacts-box__social-icons {
-	float: left;
+	//display: inline-block;
+	margin: 15px 0 0 0;
+	padding: 0;
+	text-align: left;
+	//float: left;
 	//border: 1px solid black;
+	background: none;
+	//margin: 1.5em 1em 0 0;
+	//margin-left: 40px;
+	a img{
+	display: inline-block;
+	margin-right: 10px;
 	width: 50px;
 	height: 50px;
-	background: none;
-	margin: 1.5em 1em 0 0;
-	//margin-left: 40px;
 	transition: all 0.3s;
-	a img{
 		//box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.4);
 	}
 	a img:hover{
 		//box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.4);
-	}
-	&:hover{
-		transform: scale(1.2);
+			transform: scale(1.2);
 	}
 	@media (max-width: $planshet) {
-		//margin: auto;
-		margin-top: 1em;
-		margin-bottom: 1em;
-			width: 50px;
-			height: 50px;
+		text-align: center;
+		margin: 25px 0 0 0;
 	}
 }
 
@@ -418,6 +434,7 @@ a {
 }
 
 .s-footer__license {
+	font-family: "Open Sans Bold",sans-serif;
 	padding-left: 40px;
 	font-size: 12px;
 	font-weight: bold;
@@ -501,11 +518,11 @@ a {
 
 
 
-	.contacts-box__maps {
+	/*.contacts-box__maps {
 		height: 400px;
 		margin: 0;
 		padding: 0;
-	}
+	}*/
 
 
 }
@@ -532,6 +549,7 @@ a {
 }
 
 .form-box__zagolovok {
+	font-family: "Open Sans Bold",sans-serif;
 	display: block;
 	text-align: center;
 	width: 100%;
@@ -561,7 +579,7 @@ a {
 	margin: auto;
 	max-width: 1000px;
 	background: $lite-blue2;
-	@include bradius(10px);
+	@include bradius(15px);
 	@media (min-width: 1280px) {
 		//max-width: 1000px;
 	}
@@ -571,6 +589,7 @@ a {
 }
 
 .form-box__submit {
+	font-family: "Open Sans Bold",sans-serif;
 	background: $green2;
 	border-bottom: 3px solid $dark-green2;
 	padding: 0 20px;
@@ -578,7 +597,8 @@ a {
 	display: block;
 	margin: 30px auto 0;
 	color: #fff;
-	@include bradius(5px);
+	cursor: pointer;
+	@include bradius(15px);
 	font-weight: bold;
 	font-size: 18px;
 	@media (max-width: $planshet) {}
@@ -602,6 +622,7 @@ a {
 }
 
 .form-box__input-name {
+	font-family: "Open Sans Bold",sans-serif;
 	display: block;
 	padding: 2px 0;
 	width: 100%;
@@ -613,8 +634,8 @@ a {
 }
 /*TEXT*/
 .pardon__title {
+	font-family: "Open Sans Bold",sans-serif;
 	font-size: 1.4em;
-	font-weight: bold;
 }
 
 .pardon__paragraf {}

@@ -63,7 +63,7 @@ gulp.task('browser-sync',['js','css-libs'], function() {
 });*/
 gulp.task('sass', function () {
 	return gulp.src('app/scss/*.scss') //берем какие-нибудь файлы, и возвращаем
-				.pipe(sass()) // вызов како-то команды, плагина,
+				.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError())) // вызов како-то команды, плагина,
 				.pipe(gcmq())
 				.pipe(autoprefixer(['last 15 versions','> 1%','ie 8','ie 7'],{cascade:true}))
 				.pipe(gulp.dest('app/css')) //выгружаем работу плагина

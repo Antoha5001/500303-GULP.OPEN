@@ -32,10 +32,10 @@ include "modules/form.php";
           </div>
           <div class="col col-lg-6 col-md-12">
               <div class="phone-top">
-                  <p class="phone-top__adres phone-top__adres_big">МНОГОКАНАЛЬНЫЙ ТЕЛЕФОН</p>
+                  <p class="phone-top__title">МНОГОКАНАЛЬНЫЙ ТЕЛЕФОН</p>
                   <p class="phone-top__kod-goroda">+7 (3852) <span class="phone-top__kod-goroda phone-top__number">50-03-03</span>
                       </p>
-                      <p class="phone-top__adres phone-top__adres_relative">
+                      <p class="phone-top__adres">
                       г. Барнаул, ул.&nbsp;Партизанская,&nbsp;169</p>
               </div>
           </div>
@@ -45,7 +45,9 @@ include "modules/form.php";
               <h1 class="slogan-box__slogan">Ваш верный шаг <br>к здоровой жизни!</h1>
           </div>
           <div class="col col-lg-12 price-box">
-              <div class="price-box__price"></div>
+              <div class="price-box__price">
+                  <img src="images/price.png" alt="">
+              </div>
           </div>
         <div class="col col-lg-12 slogan-box">
               <h2 class="pardon__title">Приносим свои извинения!</h2><br>
@@ -84,9 +86,7 @@ include "modules/form.php";
                       <p class = "contacts-box__podzagolovok">                        e-mail: <a href="mailto:info@500303.ru" class="link">info@500303.ru</a></p>
                       <div class="contacts-box__social-icons">
                         <a href="https://vk.com/club131352162" target="_blank"><img src="images/vk.svg" alt=""></a>
-                      </div>
-                      <div class="contacts-box__social-icons">
-                        <a href="https://vk.com/club131352162" target="_blank"><img src="images/vk.svg" alt=""></a>
+                          <a href="https://www.instagram.com/msktru/" target="_blank"><img src="images/instagram.svg" alt=""></a>
                       </div>
                   </div>
                   <div class="col col-lg-8 col-md-12 contacts-box__maps">
