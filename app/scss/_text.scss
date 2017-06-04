@@ -1,0 +1,11 @@
+@include font-face("nautilys", "../fonts/nautiluspompilius");
+@include font-face("Open Sans", "../fonts/OpenSans-Regular");
+@include font-face("Open Sans Bold", "../fonts/OpenSans-Bold");
+
+h1{
+  font-size: 42px;
+  font-family: "Open Sans Bold", sans-serif;
+  color: #00bbff;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}

@@ -1,17 +1,16 @@
 @import "_library";
 @import "_reset";
 @import "_setka";
-//@import url(reset.css);
+@import "_price";
+@import "_text";
+/*@import url(reset.css);
 //@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700&subset=cyrillic);
 //@font-face {
 //	font-family: nautilys;
 	//src: url("../fonts/nautiluspompilius.ttf");
 	//font-weight: 400;
 	//font-style: normal;
-//}
-@include font-face("nautilys", "../fonts/nautiluspompilius");
-@include font-face("Open Sans", "../fonts/OpenSans-Regular");
-@include font-face("Open Sans Bold", "../fonts/OpenSans-Bold");
+//}*/
 * {
 	border: 0;
 }
@@ -65,7 +64,9 @@ a {
 
 }
 
-//Logotype
+/*
+*	Logotype
+*/
 .logo-box__logo {
 	opacity: 0;
 	transition: opacity 1.5s;
@@ -190,7 +191,10 @@ a {
 	}
 }
 
-//SLOGAN
+/*
+*SLOGAN
+*/
+
 .slogan-box {
 	display: flex;
 	flex-direction: column;
@@ -236,7 +240,11 @@ a {
 		font-family: nautilys;
 	}
 }
-//PRICE
+
+/*
+*	PRICE
+*/
+
 .price-box {
 	margin: 30px auto 0;
 	@media (min-width: 910px) {
@@ -262,15 +270,15 @@ a {
 		height: auto;
 	}
 	@media (max-width: $planshet) {
-		// @include price(calc(100% - 80px), 300px, 'price.png');
-		// background-size: contain;
-		// max-width: 550px;
+		/* @include price(calc(100% - 80px), 300px, 'price.png');
+		background-size: contain;
+		max-width: 550px;*/
 	}
 	@media (max-width: $phone) {
-		// @include price(calc(100% - 40px), auto, 'price-planshet.png');
-		// background-size: contain;
-		// margin: auto;
-		// max-width: 470px;
+		/* @include price(calc(100% - 40px), auto, 'price-planshet.png');
+		 background-size: contain;
+		 margin: auto;
+		 max-width: 470px;*/
 	}
 	/*@media (max-width: 380px) {
 		 @include price(270px, 108px, 'price-ss.png');
