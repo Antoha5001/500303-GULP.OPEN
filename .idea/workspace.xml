@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99f4fa7d-5faa-471a-92b8-73ec3e7da2e3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scss/_library.scss" afterPath="$PROJECT_DIR$/app/scss/_library.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scss/_setka.scss" afterPath="$PROJECT_DIR$/app/scss/_setka.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scss/mystyle.scss" afterPath="$PROJECT_DIR$/app/scss/mystyle.scss" />
-    </list>
+    <list default="true" id="99f4fa7d-5faa-471a-92b8-73ec3e7da2e3" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -314,12 +310,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1496543888584</updated>
-      <workItem from="1496543889822" duration="6041000" />
+      <workItem from="1496543889822" duration="6047000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6041000" />
+    <option name="totallyTimeSpent" value="6047000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
