@@ -45,6 +45,7 @@ html {
 	background: #eefaff;
 	height: 100%;
 	font: 100%/1.5em 'Open Sans', sans-serif;
+	color: $black;
 }
 
 a {
@@ -329,6 +330,10 @@ a {
 		height: 400px;
 		background: $lite-green;
 	}*/
+.contacts-wrapper{
+	padding: 0;
+	margin: 0;
+}
 .contacts-box {
 	width: 100%;
 	max-width: none;
@@ -371,7 +376,7 @@ a {
 }
 
 .contacts-box__podzagolovok {
-		@include tsize(1.2rem, black, 1.8rem);
+		@include tsize(1.2rem, $black, 1.8rem);
 		//margin-left: 40px;
 		text-align: left;
 	@media screen and (max-width:$planshet){
@@ -379,6 +384,23 @@ a {
 	font-size: 1.3rem;
 	line-height: 1.5em;
 
+	}
+}
+.contacts-box__phone {
+	font-family: "Open Sans Bold",sans-serif;
+	font-weight: bold;
+		text-align: left;
+	font-size: 2.4rem;
+	color: $black;
+	@media screen and (max-width:$planshet){
+		text-align: center;
+	//font-size: 1.3rem;
+	line-height: 1.5em;
+
+	}
+	span{
+		font-size: 1.3rem;
+		color: #666;
 	}
 }
 
@@ -392,7 +414,7 @@ a {
 }
 .contacts-box__social-icons {
 	//display: inline-block;
-	margin: 15px 0 0 0;
+	margin: 25px 0 0 0;
 	padding: 0;
 	text-align: left;
 	//float: left;
@@ -421,7 +443,11 @@ a {
 .contacts-box__maps {
 	height: 400px;
 	padding: 0;
-	margin: 0 auto;
+	margin: 0;
+	@media screen and (max-width: 960px) {
+		width:100%;
+		margin: 0 20px;
+}
 }
 
 #map {
@@ -463,77 +489,6 @@ a {
 	//justify-content: center;
 }
 
-@media screen and (min-width: $planshet) {
-	/*FLUID*/
-	/*
-	.cols {
-		float: left;
-		padding: 0;
-		text-align: center;
-	}
-
-	.col1 {
-		width: 8.333333333333333%;
-	}
-
-	.col2 {
-		width: 16.66666666666667%;
-	}
-
-	.col3 {
-		width: 25%;
-	}
-
-	.col4 {
-		width: 33.33333333333333%;
-	}
-
-	.col5 {
-		width: 41.66666666666667%;
-	}
-
-	.col6 {
-		width: 50%;
-	}
-
-	.col7 {
-		width: 58.33333333333333%;
-	}
-
-	.col8 {
-		width: 66.66666666666667%;
-	}
-
-	.col9 {
-		width: 75%;
-	}
-
-	.col10 {
-		width: 83.33333333333333%;
-	}
-
-	.col11 {
-		width: 91.66666666666667%;
-	}
-
-	.col12 {
-		width: 100%;
-	}
-*/
-	/*.s-conteiner {
-		@include conteiner( 'menu.jpg');
-	}*/
-
-
-
-	/*.contacts-box__maps {
-		height: 400px;
-		margin: 0;
-		padding: 0;
-	}*/
-
-
-}
 
 /*forms*/
 .form-box {
@@ -644,6 +599,7 @@ a {
 .pardon__title {
 	font-family: "Open Sans Bold",sans-serif;
 	font-size: 1.4em;
+	color: $black;
 }
 
 .pardon__paragraf {}

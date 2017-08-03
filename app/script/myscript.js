@@ -7,6 +7,7 @@ $dark_green = "#397556",
 $dark_green2 = "#1E3D2D";
 $(document).ready(function(){
 
+
       setTimeout(function(){
             $('.logo-box__logo').addClass('is-visible');
       },500);

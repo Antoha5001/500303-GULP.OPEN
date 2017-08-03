@@ -6,6 +6,7 @@ var map;
                     zoom: 17,
                     zoomControl:true,
                     geoclicker:false,
+                    scrollWheelZoom:false,
                     fullscreenControl:false
                 });
 
