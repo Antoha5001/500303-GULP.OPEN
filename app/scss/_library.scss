@@ -69,8 +69,9 @@ $black: #333333;
 }
 
 @mixin footer($background) {
-  height: 40px;
-  background: url($image_dir+$background) repeat-x;
+  padding: 10px;
+  min-height: 40px;
+  background: url($image_dir+$background) repeat-x #60C48F;
   overflow: hidden;
 }
 
