@@ -1,0 +1,23 @@
+#photos-wrapper {
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.photo-box {
+  width: 293px;
+  height: 293px;
+  //max-width: 380px;
+  //height: 380px;
+  background: #00ba78;
+  margin: 15px;
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+  cursor: pointer;
+  img{
+    transition: transform 0.5s;
+  }
+  img:hover{
+    transform: scale(1.1);
+  }
+}

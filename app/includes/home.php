@@ -1,4 +1,4 @@
-<div class="row">
+<section class="row">
     <div class="col col-lg-12 slogan-box">
         <h1 class="slogan-box__slogan">Ваш верный шаг <br>к здоровой жизни!</h1>
     </div>
@@ -15,4 +15,4 @@
             Ответим на email:<a class="link" href="mailto:info@500303.ru"> info@500303.ru</a>
         </p> <br/>
     </div>
-</div>
+</section>
