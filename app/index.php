@@ -11,7 +11,6 @@ switch ($id){
     default:include "includes/home.php";
 }
  ?>
-<?php include "includes/photos.php"?>
 <div class="row form-box">
     <div class="col col-lg-12">
         <form class="form-box__form validate" action="script/form.php" method="post" id="top_form">

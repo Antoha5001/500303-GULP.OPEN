@@ -20,6 +20,14 @@
 
 </head>
 <body>
+<div class="modal-wrapper" id="modal-wrapper">
+	<div class="photo-modal-box">
+
+	</div>
+<!--	<a href="#" class="close_button" id="close_button">-->
+<!--		<img src="../images/close.svg" alt="">-->
+<!--	</a>-->
+</div>
 <div class="wrapper s-conteiner">
     <header class="row">
         <div class="col col-lg-6  col-md-12 logo-box">

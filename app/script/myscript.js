@@ -1,3 +1,4 @@
+'use strict';
 (function () {
 
 	var $lite_green = "#ccffe4",
@@ -22,22 +23,215 @@
 
 	//Photos
 	var photoWrapper = document.getElementById('photos-wrapper'),
-		img = photoWrapper.getElementsByTagName('img');
+		modal = document.getElementById('modal-wrapper'),
+		photoModalBox = modal.firstElementChild,
+		imgBig = document.createElement('img');
 
-	for (var i = 0; i < img.length; i++){
-		img[i].addEventListener('click',function () {
-			console.log(this.src);
-		});
+	/*-----------------------------------------*/
+
+	//Конструктор галереи
+	function Photogallary(settings) {
+		this.modal = document.getElementById(settings.modal);
+		this.wrapper = document.getElementById(settings.wrapper);
+		this.photoBox = this.modal.firstElementChild;
+		this.imgBig = document.createElement('img');
+		this.img = this.wrapper.getElementsByTagName('img');
+
+		//Получить координаты окна
+		this.coord = function () {
+			var coord = {};
+
+			coord.body = document.body;
+			coord.docEl = document.documentElement;
+			coord.scrollTop = window.pageYOffset || docEl.scrollTop || coord.body.scrollTop;
+
+			coord.clientHeight = coord.docEl.clientHeight || coord.body.clientHeight;
+			coord.clientWidth = coord.docEl.clientWidth || coord.bodybody.clientWidth;
+
+			return coord;
+		};
+
+
+		//Показать модальное окно
+		this.modalShow = function () {
+			var coord = this.coord();
+			this.modal.classList.add('is-block');
+			this.modal.style.height = coord.docEl.scrollHeight + 'px';
+		};
+
+		//Показать фото
+		this.showPhoto = function () {
+			var self = this;
+
+			if (this.wrapper != undefined) {
+				for (var i = 0; i < this.img.length; i++) {
+
+					this.img[i].addEventListener('click', function (e) {
+
+						e.stopPropagation();
+
+						var coord = self.coord();
+
+						// document.body.style.overflow = 'hidden';
+						self.modalShow();
+						setTimeout(function () {
+							console.log(self.imgBig);
+							self.addStyle();
+							// self.showPhotoCoord();
+						},500);
+
+						self.imgBig.src = this.src.slice(0, -10) + '.jpg';
+						photoModalBox.appendChild(self.imgBig);
+
+
+						window.addEventListener('resize', function (ev) {
+							// console.log(imgBig.style.top);
+							self.addStyle();
+						});
+						// console.log(img.getBoundingClientRect());
+					});
+				}
+			}
+
+			//
+			window.addEventListener('click', function (ev) {
+				if (ev.target == modal) {
+					self.imgBig.style.opacity = "0";
+					self.modal.classList.remove('is-block');
+					document.body.style.overflow = 'auto';
+					photoModalBox.innerHTML = "";
+
+				}
+			});
+
+		};
+
+		//Добавляет стили к большому фото
+		this.addStyle = function () {
+			var closeButton = document.createElement('a'),
+			img = document.createElement('img');
+
+			closeButton.id = 'close_button';
+			closeButton.classList.add('close_button');
+
+			img.src = 'images/close.svg';
+
+			closeButton.appendChild(img);
+
+			var self = this;
+			var coord = this.coord();
+			console.log(self.imgBig);
+			this.imgBig.style.maxWidth = coord.clientWidth - 40 + "px";
+			this.imgBig.style.maxHeight = coord.clientHeight - 40 + "px";
+			this.imgBig.style.top = (coord.clientHeight - this.imgBig.height) / 2 + coord.scrollTop + "px";
+			this.imgBig.style.left = (coord.clientWidth - this.imgBig.width) / 2 + "px";
+			this.imgBig.style.opacity = "1";
+			this.imgBig.parentElement.appendChild(closeButton);
+			console.log(this.imgBig.getBoundingClientRect());
+		}
+
+		this.showPhotoCoord = function () {
+			console.log(this.imgBig.getBoundingClientRect());
+		}
 	}
 
 
-	window.onload = function () {
+	/*-----------------------------------------*/
 
+	var a = new Photogallary({
+		wrapper : "photos-wrapper",
+		modal : "modal-wrapper"
+	});
+
+	a.showPhoto();
+
+
+	// modal.style.height = document.documentElement.scrollHeight + 'px';
+
+	//Получить координаты
+	// function getClientCoord() {
+	// 	var coord = {};
+	//
+	// 	coord.body = document.body;
+	// 	coord.docEl = document.documentElement;
+	// 	coord.scrollTop = window.pageYOffset || docEl.scrollTop || coord.body.scrollTop;
+	//
+	// 	coord.clientHeight = coord.docEl.clientHeight || coord.body.clientHeight;
+	// 	coord.clientWidth = coord.docEl.clientWidth || coord.bodybody.clientWidth;
+	//
+	// 	return coord;
+	// }
+
+	//Показать модальное окно
+	// function modalShow(coord) {
+	// 	modal.classList.add('is-block');
+	// 	modal.style.height = coord.docEl.scrollHeight + 'px';
+	// }
+
+	function imgBigAddStyle() {
+
+		var coord = getClientCoord();
+		var imgBig = modal.getElementsByTagName('img')[0];
+
+		imgBig.style.maxWidth = coord.clientWidth - 40 + "px";
+		imgBig.style.maxHeight = coord.clientHeight - 40 + "px";
+		imgBig.style.top = (coord.clientHeight - imgBig.height) / 2 + coord.scrollTop + "px";
+		imgBig.style.left = (coord.clientWidth - imgBig.width) / 2 + "px";
+		console.log(imgBig.getBoundingClientRect());
+		// console.log(document.getElementsByClassName('photo-modal-box')[0].firstElementChild.clientWidth);
 	}
+
+	function showPhoto() {
+		if (photoWrapper != undefined) {
+
+			var img = photoWrapper.getElementsByTagName('img');
+			for (var i = 0; i < img.length; i++) {
+
+				img[i].addEventListener('click', function (e) {
+
+					e.stopPropagation();
+
+					var coord = getClientCoord();
+
+
+					// document.body.style.overflow = 'hidden';
+					modalShow(coord);
+
+					imgBig.src = this.src.slice(0, -10) + '.jpg';
+					photoModalBox.appendChild(imgBig);
+
+					imgBigAddStyle();
+
+					window.addEventListener('resize', function (ev) {
+						console.log(imgBig.style.top);
+						imgBigAddStyle();
+					});
+					// console.log(img.getBoundingClientRect());
+					console.log(imgBig.height);
+					console.log(imgBig.clientHeight);
+					console.log(imgBig.getBoundingClientRect());
+
+				});
+			}
+
+			// console.log(document.getElementsByClassName('photo-modal-box')[0].firstElementChild.clientWidth);
+		}
+	}
+// showPhoto();
+
+
+
+
+
+
+
+	window.addEventListener('scroll', function (ev) {
+
+		// modal.style.height = document.documentElement.scrollHeight + 'px';
+	})
 
 
 })();
-
 
 //Plugin Scroll Chrome
 
