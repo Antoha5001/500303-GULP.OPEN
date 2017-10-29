@@ -8,6 +8,7 @@ include "includes/header.php";
 $id = $_GET["id"];
 switch ($id){
     case "page1":include "includes/agreement.php"; break;
+    case "test":include "includes/test.php"; break;
     default:include "includes/home.php";
 }
  ?>

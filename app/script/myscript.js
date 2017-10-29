@@ -37,6 +37,8 @@
 		this.imgBig = document.createElement('img');
 		this.img = this.wrapper.getElementsByTagName('img');
 
+		this.closeButton = document.getElementsByClassName('close_button')[0];
+
 		//Получить координаты окна
 		this.coord = function () {
 			var coord = {};
@@ -56,14 +58,23 @@
 		this.modalShow = function () {
 			var coord = this.coord();
 			this.modal.classList.add('is-block');
+			this.modal.classList.add('is-visible');
 			this.modal.style.height = coord.docEl.scrollHeight + 'px';
+		};
+		this.modalHide = function () {
+			this.imgBig.style.opacity = "0";
+			this.modal.classList.remove('is-block');
+			this.modal.classList.remove('is-visible');
+			document.body.style.overflow = 'auto';
+			// photoModalBox.innerHTML = "";
+			photoModalBox.removeChild(this.imgBig);
 		};
 
 		//Показать фото
 		this.showPhoto = function () {
 			var self = this;
 
-			if (this.wrapper != undefined) {
+			if (this.wrapper !== undefined) {
 				for (var i = 0; i < this.img.length; i++) {
 
 					this.img[i].addEventListener('click', function (e) {
@@ -72,16 +83,18 @@
 
 						var coord = self.coord();
 
-						// document.body.style.overflow = 'hidden';
-						self.modalShow();
-						setTimeout(function () {
-							console.log(self.imgBig);
-							self.addStyle();
-							// self.showPhotoCoord();
-						},500);
-
 						self.imgBig.src = this.src.slice(0, -10) + '.jpg';
 						photoModalBox.appendChild(self.imgBig);
+
+						//Убрать скрол у окна
+						document.body.style.overflow = 'hidden';
+						self.modalShow();
+
+						self.imgBig.addEventListener('load',function () {
+							self.addStyle();
+							// console.log(123);
+						});
+
 
 
 						window.addEventListener('resize', function (ev) {
@@ -92,14 +105,15 @@
 					});
 				}
 			}
-
+			self.closeButton.addEventListener('click',function (e) {
+				e.preventDefault();
+				self.modalHide();
+			});
 			//
 			window.addEventListener('click', function (ev) {
-				if (ev.target == modal) {
-					self.imgBig.style.opacity = "0";
-					self.modal.classList.remove('is-block');
-					document.body.style.overflow = 'auto';
-					photoModalBox.innerHTML = "";
+				if (ev.target === modal) {
+
+					self.modalHide();
 
 				}
 			});
@@ -108,127 +122,45 @@
 
 		//Добавляет стили к большому фото
 		this.addStyle = function () {
-			var closeButton = document.createElement('a'),
-			img = document.createElement('img');
 
-			closeButton.id = 'close_button';
-			closeButton.classList.add('close_button');
-
-			img.src = 'images/close.svg';
-
-			closeButton.appendChild(img);
+			this.closeButton.id = 'close_button';
 
 			var self = this;
 			var coord = this.coord();
-			console.log(self.imgBig);
 			this.imgBig.style.maxWidth = coord.clientWidth - 40 + "px";
 			this.imgBig.style.maxHeight = coord.clientHeight - 40 + "px";
 			this.imgBig.style.top = (coord.clientHeight - this.imgBig.height) / 2 + coord.scrollTop + "px";
 			this.imgBig.style.left = (coord.clientWidth - this.imgBig.width) / 2 + "px";
 			this.imgBig.style.opacity = "1";
-			this.imgBig.parentElement.appendChild(closeButton);
-			console.log(this.imgBig.getBoundingClientRect());
-		}
+			this.imgBig.parentElement.appendChild(this.closeButton);
+			// console.log(this.imgBig.getBoundingClientRect());
+			var imgBigCoord = this.imgBig.getBoundingClientRect();
+			// console.log(imgBigCoord);
+			this.closeButton.classList.add('close_button_show');
+			this.closeButton.style.top =this.imgBig.offsetTop+10+"px";
+			this.closeButton.style.left = (imgBigCoord.x+imgBigCoord.width - (this.closeButton.getBoundingClientRect()).width-10)+"px";
+			// console.log((this.closeButton.getBoundingClientRect()).width);
+
+		};
 
 		this.showPhotoCoord = function () {
-			console.log(this.imgBig.getBoundingClientRect());
+			// console.log(this.imgBig.getBoundingClientRect());
 		}
 	}
 
 
 	/*-----------------------------------------*/
 
-	var a = new Photogallary({
-		wrapper : "photos-wrapper",
-		modal : "modal-wrapper"
-	});
 
-	a.showPhoto();
-
-
-	// modal.style.height = document.documentElement.scrollHeight + 'px';
-
-	//Получить координаты
-	// function getClientCoord() {
-	// 	var coord = {};
-	//
-	// 	coord.body = document.body;
-	// 	coord.docEl = document.documentElement;
-	// 	coord.scrollTop = window.pageYOffset || docEl.scrollTop || coord.body.scrollTop;
-	//
-	// 	coord.clientHeight = coord.docEl.clientHeight || coord.body.clientHeight;
-	// 	coord.clientWidth = coord.docEl.clientWidth || coord.bodybody.clientWidth;
-	//
-	// 	return coord;
-	// }
-
-	//Показать модальное окно
-	// function modalShow(coord) {
-	// 	modal.classList.add('is-block');
-	// 	modal.style.height = coord.docEl.scrollHeight + 'px';
-	// }
-
-	function imgBigAddStyle() {
-
-		var coord = getClientCoord();
-		var imgBig = modal.getElementsByTagName('img')[0];
-
-		imgBig.style.maxWidth = coord.clientWidth - 40 + "px";
-		imgBig.style.maxHeight = coord.clientHeight - 40 + "px";
-		imgBig.style.top = (coord.clientHeight - imgBig.height) / 2 + coord.scrollTop + "px";
-		imgBig.style.left = (coord.clientWidth - imgBig.width) / 2 + "px";
-		console.log(imgBig.getBoundingClientRect());
-		// console.log(document.getElementsByClassName('photo-modal-box')[0].firstElementChild.clientWidth);
+	if(document.getElementById('photos-wrapper')){
+		var a = new Photogallary({
+			wrapper : "photos-wrapper",
+			modal : "modal-wrapper"
+		});
+		a.showPhoto();
 	}
 
-	function showPhoto() {
-		if (photoWrapper != undefined) {
 
-			var img = photoWrapper.getElementsByTagName('img');
-			for (var i = 0; i < img.length; i++) {
-
-				img[i].addEventListener('click', function (e) {
-
-					e.stopPropagation();
-
-					var coord = getClientCoord();
-
-
-					// document.body.style.overflow = 'hidden';
-					modalShow(coord);
-
-					imgBig.src = this.src.slice(0, -10) + '.jpg';
-					photoModalBox.appendChild(imgBig);
-
-					imgBigAddStyle();
-
-					window.addEventListener('resize', function (ev) {
-						console.log(imgBig.style.top);
-						imgBigAddStyle();
-					});
-					// console.log(img.getBoundingClientRect());
-					console.log(imgBig.height);
-					console.log(imgBig.clientHeight);
-					console.log(imgBig.getBoundingClientRect());
-
-				});
-			}
-
-			// console.log(document.getElementsByClassName('photo-modal-box')[0].firstElementChild.clientWidth);
-		}
-	}
-// showPhoto();
-
-
-
-
-
-
-
-	window.addEventListener('scroll', function (ev) {
-
-		// modal.style.height = document.documentElement.scrollHeight + 'px';
-	})
 
 
 })();

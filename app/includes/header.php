@@ -22,6 +22,9 @@
 <body>
 <div class="modal-wrapper" id="modal-wrapper">
 	<div class="photo-modal-box">
+		<a href="#" class="close_button">
+			<img src="../images/close.svg" alt="">
+		</a>
 
 	</div>
 <!--	<a href="#" class="close_button" id="close_button">-->

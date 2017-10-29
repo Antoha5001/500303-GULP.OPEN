@@ -16,4 +16,4 @@
         </p> <br/>
     </div>
 </section>
-<?php //include "includes/photos.php"?>
+<?php include "includes/photos.php"?>
