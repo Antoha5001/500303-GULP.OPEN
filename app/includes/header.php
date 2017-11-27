@@ -2,15 +2,30 @@
 <html lang="ru">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta name="keywords" content=""/>
-    <meta name="description" content=""/>
+    <meta name="keywords" content="Медицинский центр «ЖИЗНЬ»"/>
+    <meta name="description" content="Медицинский центр «ЖИЗНЬ»"/>
     <meta name="author" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="images/favicon.png" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
     <link rel="stylesheet" type="text/css" href="css/mystyle.min.css">
-    <title>МЦ «ЖИЗНЬ»</title>
+    <title>Медицинский центр «ЖИЗНЬ»</title>
+
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#0080ff">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#0080ff">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#0080ff">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
