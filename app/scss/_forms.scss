@@ -73,6 +73,7 @@
   margin: 30px auto 0;
   color: #fff;
   cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.25, .46, .45, .94);
   @include bradius(15px);
   font-weight: bold;
   font-size: 18px;
@@ -90,8 +91,15 @@
   padding: 15px;
   width: 100%;
   margin: 0 auto;
+  transition: all 0.5s cubic-bezier(0.25, .46, .45, .94);
   //height: 30px;
   @media (max-width: $planshet) {}
+}
+.form-box__input:hover {
+background: #dff0ff;
+}
+.form-box__input:focus {
+background: #b4daff;
 }
 
 .form-box__input {
