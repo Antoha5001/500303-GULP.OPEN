@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="99f4fa7d-5faa-471a-92b8-73ec3e7da2e3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/includes/header.php" afterPath="$PROJECT_DIR$/app/includes/header.php" />
-      <change beforePath="$PROJECT_DIR$/app/index.php" afterPath="$PROJECT_DIR$/app/index.php" />
-      <change beforePath="$PROJECT_DIR$/app/script/scripts.min.js" afterPath="$PROJECT_DIR$/app/script/scripts.min.js" />
-      <change beforePath="$PROJECT_DIR$/app/scss/_library.scss" afterPath="$PROJECT_DIR$/app/scss/_library.scss" />
-      <change beforePath="$PROJECT_DIR$/app/scss/mystyle.scss" afterPath="$PROJECT_DIR$/app/scss/mystyle.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -390,12 +385,20 @@
       <workItem from="1509202297977" duration="8475000" />
       <workItem from="1509243686247" duration="1370000" />
       <workItem from="1511753194246" duration="681000" />
-      <workItem from="1511753943003" duration="3312000" />
+      <workItem from="1511753943003" duration="3385000" />
     </task>
+    <task id="LOCAL-00001" summary="metrika">
+      <created>1511769345783</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1511769345783</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83121000" />
+    <option name="totallyTimeSpent" value="83194000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="36" y="46" width="1627" height="818" extended-state="0" />
@@ -449,6 +452,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="metrika" />
+    <option name="LAST_COMMIT_MESSAGE" value="metrika" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
