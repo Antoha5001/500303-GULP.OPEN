@@ -12,7 +12,9 @@ switch ($id){
     default:include "includes/home.php";
 }
  ?>
-<div class="row form-box">
+
+</div>
+<div class="container-fluid form-box">
     <div class="col col-lg-12">
         <form class="form-box__form validate" action="script/form.php" method="post" id="top_form">
             <h3 class="form-box__zagolovok">Закажите звонок!</h3>
@@ -28,49 +30,104 @@ switch ($id){
         </form>
     </div>
 </div>
-<div class="row contacts-box">
-    <div class="col col-lg-4 col-md-12 contacts-box__contacts">
-        <p class="contacts-box__zagolovok">
-            Наши контакты</p>
-        <h1 class="contacts-box__podzagolovok contacts-box__podzagolovok_bold">
-            Медицинский центр «ЖИЗНЬ»</h1>
-        <!--            <p class="contacts-box__podzagolovok contacts-box__podzagolovok_bold"> Адрес:</p>-->
-        <p class="contacts-box__podzagolovok">
-            г. Барнаул <br>ул. Партизанская, 169</p>
-        <br>
-        <p class="contacts-box__phone"><span>+7 (3852) </span>50-03-03</p>
-        <br>
-        <p class="contacts-box__podzagolovok"> e-mail: <a href="mailto:info@500303.ru"
-                                                          class="link">info@500303.ru</a></p>
-        <div class="contacts-box__social-icons">
-            <a href="https://vk.com/club131352162" target="_blank"><img src="images/vk.svg" alt=""></a>
-            <a href="https://www.instagram.com/msktru/" target="_blank"><img src="images/instagram.svg" alt=""></a>
-        </div>
-    </div>
-    <div class="col col-lg-8 col-md-12 contacts-box__maps">
-        <div id="map"></div>
 
-    </div>
+<?php include "includes/google_map.php"?>
+<div class="container">
+	<div class="row">
+		<div class="col-12 slogan-box">
+			<p class="pardon__title">Приносим свои извинения!</p><br>
+			<p class="pardon__paragraf">В связи с реконструкцией сайта
+				не вся информация актуальна.<br/>
+				По любому вопросу можно звонить по телефону 50-03-03.<br/>
+				Ответим на email:<a class="link" href="mailto:info@500303.ru"> info@500303.ru</a>
+			</p> <br/>
+		</div>
+	</div>
 </div>
-<div class="row s-footer">
-    <div class="col col-lg-6 col-md-12">
-        <div class="s-footer__license">
-            <span>Лицензия № ЛО-22-01-004076</span><br/>
-        </div>
-    </div>
-    <div class="col col-lg-6 col-md-12">
-        <div class="s-footer__link">
-            <a href="index.php?id=page1">Cогласие на обработку персональных данных</a>
-        </div>
-    </div>
-</div>
-</div>
-<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+<footer class="container-fluid s-footer">
+	<div class="row">
+		<div class="col-12 col-lg-6">
+			<div class="s-footer__license">
+				<span>Лицензия № ЛО-22-01-004076</span><br/>
+			</div>
+		</div>
+		<div class="col-12 col-lg-6 ">
+			<div class="s-footer__link">
+				<a href="index.php?id=page1">Cогласие на обработку персональных данных</a>
+			</div>
+		</div>
+	</div>
+</footer>
+<!--</div>-->
+<!--<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>-->
 <script type="text/javascript" src="script/scripts.min.js"></script>
+<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTlw8BVagQlIJ8nW5IV2kMazWA7aQvPYs&callback=initMap">
+</script>
 
 <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter46792473 = new Ya.Metrika({ id:46792473, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/46792473" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 
-<!-- <script>window.jQuery || document.write('<script src="script/jquery.js"><\/script>')</script> -->
+<!-- <script>window.jQuery || document.write('<script src="script/jquery.js"><\/script>')</script> --><script>
+	function initMap() {
+		var element = document.getElementById('map'),
+			doc = document.documentElement,
+			center;
+
+		if(doc.clientWidth < 992){
+			center = {
+				lat: 53.333846,
+				lng: 83.770396
+			}
+		} else{
+			center = {
+				lat: 53.3335472,
+				lng: 83.7672569
+			}
+		}
+
+		var options = {
+			zoom:17,
+			gestureHandling: 'cooperative',
+			scrollwheel: false,
+			// mapTypeControlOptions: false,
+			center: center,
+
+		};
+		var myMap = new google.maps.Map(element,options);
+
+		var icon = {
+			url:"images/map-icon.png",
+			size: new google.maps.Size(60,86),
+			scaledSize: new google.maps.Size( 60, 86 ),
+			origin: new google.maps.Point( 0, 0 ),
+			anchor: new google.maps.Point( 30, 86 )
+
+		}
+
+		var marker = new google.maps.Marker({
+			position : {
+				lat: 53.333846,
+				lng: 83.770396
+			},
+			map : myMap,
+			// icon: "images/map-icon.svg"
+			icon: icon
+			// animation: google.maps.Animation.DROP
+
+		});
+
+
+
+
+		var infoWindow = new google.maps.InfoWindow({
+			content:"<h2>Медицинский центр «Жизнь»</h2>"
+		});
+
+		marker.addListener('click', function () {
+			infoWindow.open(myMap,marker);
+		});
+	}
+</script>
 </body>
 </html>

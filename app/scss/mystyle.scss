@@ -1,9 +1,12 @@
 @import "_library";
-@import "_reset";
-@import "_setka";
+//@import "_reset";
+@import "../css/__bootstrap";
+//@import "_setka";
 @import "_price";
+@import "_header";
 @import "_text";
 @import "_forms";
+@import "_map";
 @import "_photos";
 /*@import url(reset.css);
 //@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700&subset=cyrillic);
@@ -16,7 +19,30 @@
 * {
 	border: 0;
 }
+body,
+html {
+	box-sizing: border-box;
+	background: #eefaff;
+	height: 100%;
+	font: 100%/1.5em 'Open Sans', sans-serif;
+	color: $black;
+	padding: 0;
+	margin: 0;
+}
 
+a {
+	text-decoration: none;
+}
+
+.globalwidth {}
+
+.s-conteiner {
+	@include conteiner( 'menu.jpg');
+	padding-bottom: 120px;
+	@media (max-width: $planshet) and (min-width: 580px) {
+		@include conteiner( 'menu-s.jpg');
+	}
+}
 .clear:after,
 .clear:before,
 .conteiner:after,
@@ -41,209 +67,56 @@
 	-moz-box-sizing: border-box;
 }
 
-body,
-html {
-	box-sizing: border-box;
-	background: #eefaff;
-	height: 100%;
-	font: 100%/1.5em 'Open Sans', sans-serif;
-	color: $black;
-}
 
-a {
-	text-decoration: none;
-}
-
-.globalwidth {}
-
-.s-conteiner {
-	@include conteiner( 'menu.jpg');
-	@media (max-width: $planshet) and (min-width: 580px) {
-			@include conteiner( 'menu-s.jpg');
-	}
-}
-
-.logo-box {
-
-}
-
-/*
-*	Logotype
-*/
-.logo-box__logo {
-	display: block;
-	opacity: 0;
-	transition: opacity 1.5s;
-	margin:{
-		top: 30px;
-		left: 40px;
-	}
-	width: 350px;
-	//height: 200px;
-	overflow: hidden;
-	img{
-		width: 100%;
-	}
-	@media (max-width: $planshet) {
-		width: calc(100% - 40px);
-		height: auto;
-		margin:40px auto;
-	}
-	@media (max-width: $phone) {
-		width: calc(100% - 20px);
-		height: 300px;
-                background-image:url('../images/logo_vert.svg');
-                background-position: top center;
-                background-repeat:no-repeat;
-		margin:40px auto;
-		img{
-			display: none;
-		}
-	}
-}
-
-/* Contacts in header */
-.phone-top {
-	width: 400px;
-	margin-top: 40px;
-	margin-right: 40px;
-	text-align: right;
-	float: right;
-	@media screen and (max-width: $planshet){
-		//border: 1px solid black;
-		width: 100%;
-		text-align: center;
-		margin: auto;
-		margin-top: 20px;
-		line-height: 1.8em;
-	}
-	@media screen and (max-width: $phone){
-		margin-top: -22px;
-	}
-}
-
-.phone-top__title{
-	font-family: "Open Sans Bold",sans-serif;
-	font-size: 18px;
-	color: $green;
-	@media (max-width: $planshet) {
-		font-size: 2.2rem;
-	}
-	@media (max-width: $phone) {
-		font-size: 1.2em;
-	}
-}
-
-.phone-top__adres{
-	font-family: "Open Sans Bold",sans-serif;
-	margin-top: 15px;
-	top: 4px;
-	font-size: 20px;
-	color: $blue_logo;
-	@media (max-width: $planshet) {
-		font-size: 2.4rem;
-		line-height: 2.8rem;
-	}
-	@media (max-width: $phone) {
-		font-size: 1.4rem;
-		line-height: 1.8rem;
-	}
-}
-.phone-top__kod-goroda{
-	font-family: "Open Sans Bold",sans-serif;
-	position: relative;
-  z-index: 1;
-	font-size: 1em;
-	font-weight: bold;
-	top: 5px;
-	color: $green;
-	@media (max-width: $planshet) {
-		font-size: 3rem;
-		color: $green;
-		font-weight: bold;
-		line-height: 4rem * 1.6;
-	}
-	@media (max-width: $phone) {
-		font-size: 1.6rem;
-		font-weight: bold;
-		color: $green;
-		line-height: 1.6rem * 1.6;
-	}
-	@media (max-width: 250px) {
-		@include tsize(0.9em, $green, 1.2em);
-	}
-}
-.phone-top__number{
-	font-family: "Open Sans Bold",sans-serif;
-	position: relative;
-	font-size: 40px;
-	color: $green;
-	top: 2px;
-	@media (max-width: $planshet) {
-		font-size: 5.2rem;
-		color: $green;
-		top: 2px;
-	}
-	@media (max-width: $phone){
-		font-size: 2.5rem;
-		color: #60c48f;
-		top: 1px;
-	}
-	@media (max-width: 250px) {
-		@include tsize(1.2em, $green, 1.2em);
-		position: relative;
-		top: 1px;
-	}
-}
 
 /*
 *SLOGAN
 */
 
 .slogan-box {
-	display: flex;
-	flex-direction: column;
+	//display: flex;
+	//flex-direction: column;
 	margin: 40px auto 0;
-	@media (min-width: $planshet) {
-		display: flex;
-		margin: 60px auto 0;
+	//@media (min-width: $planshet) {
+	//	display: flex;
+	//	margin: 60px auto 0;
 		min-height: 160px;
-		align-items: center;
-		justify-content: center;
+		//align-items: center;
+	//	justify-content: center;
 		text-align: center;
-	}
-	@media (max-width: $planshet) and (min-width: 580px) {
-		display: flex;
-		margin: 40px auto 0;
-		min-height: 160px;
-		align-items: center;
-		justify-content: center;
-	}
-	@media (max-width: 250px) {
-		margin: 15px 0 0;
-	}
+	//}
+	//@media (max-width: $planshet) and (min-width: $phone) {
+	//	display: flex;
+	//	margin: 40px auto 0;
+	//	min-height: 160px;
+	//	align-items: center;
+	//	justify-content: center;
+	//}
+	//@media (max-width: 250px) {
+	//	margin: 15px 0 0;
+	//}
 }
 .slogan-box__slogan {
 	display: block;
 	font-family: nautilys;
-	@include tsize(2.5em, $green, 1.5em);
-	@media (min-width: 910px) {
+	@include tsize(4em, $green, 1.5em);
+	//@media (min-width: $planshet) {
+	//	font-family: nautilys;
+	//	@include tsize(3em, $green, 1.5em);
+	//	width: 100%;
+	//}
+	@media (max-width: $planshet) and (min-width: $landPhone) {
 		font-family: nautilys;
-		@include tsize(3em, $green, 1.5em);
-		width: 100%;
+		@include tsize(60px, $green, 1.5em);
 	}
-	@media (max-width: 910px) and (min-width: 580px) {
-		font-family: nautilys;
-		@include tsize(3em, $green, 1.5em);
-	}
-	@media (max-width: 380px) {
+	@media (max-width: $phone) {
 		font-family: nautilys;
 		@include tsize(2.0em, $green, 1.5em);
 	}
-	@media (max-width: 250px) {
-		 @include tsize(1.4em, $green, 1.2em);
-		font-family: nautilys;
-	}
+	//@media (max-width: 250px) {
+	//	 @include tsize(1.4em, $green, 1.2em);
+	//	font-family: nautilys;
+	//}
 }
 
 /*
@@ -455,9 +328,9 @@ a {
 }
 
 #map {
-	width: 100%;
-	height: 433px;
-	background: #ccc;
+	//width: 100%;
+	//height: 433px;
+	//background: #ccc;
 }
 
 /* FOOTER */

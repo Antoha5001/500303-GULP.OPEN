@@ -16,24 +16,32 @@ var gulp           = require('gulp'),
 		gcmq         = require("gulp-group-css-media-queries"),
 		srv 						= '500303-gulp.open:82';
 
-// Скрипты проекта
 
+// Плагины
+var jsLibs = [
+	'app/script/jquery.js',
+	'app/script/tether.min.js',
+	'app/script/bootstrap.min.js',
+	'app/libs/modernizr/modernizr-custom.js',
+	'app/script/common.min.js'
+];
+var jsMy = [
+	// 'app/script/2gis.js',
+	'app/script/map.js',
+	'app/script/myscript.js'
+];
+
+//Подключение собственные JS скрипты
 gulp.task('common-js', function() {
-	return gulp.src([
-		'app/script/2gis.js',
-		'app/script/myscript.js',
-		])
+	return gulp.src(jsMy)
 	.pipe(concat('common.min.js'))
 	.pipe(uglify())
 	.pipe(gulp.dest('app/script'));
 });
 
+// Подключение плагинов JS
 gulp.task('js', ['common-js'], function() {
-	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js',
-		'app/libs/modernizr/modernizr-custom.js',
-		'app/script/common.min.js', // Всегда в конце
-		])
+	return gulp.src(jsLibs)
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Минимизировать весь js (на выбор)
 	.pipe(gulp.dest('app/script'))

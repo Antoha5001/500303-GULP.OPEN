@@ -11,7 +11,8 @@
 
 
 	var logo = document.getElementsByClassName("logo-box__logo")[0],
-		logoImage = logo.firstElementChild;
+		logoImage = logo.firstElementChild,
+		doc = document.documentElement;
 
 	//Logo animations
 	setTimeout(function () {

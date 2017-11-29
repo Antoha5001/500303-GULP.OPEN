@@ -1,19 +1,23 @@
-$green:#60c48f;
+
+//Зелёный
+$green: #6fc58f;
 $dark-green:#397556;
 $lite-green: #e8fff3;
-
 $nice-green: #ccffe4;
 
 $lite-blue: #0080ff;
-
 $blue: #38baf2;
 $blue_logo: #00bbff;
 
 $image_dir:'../images/';
-$planshet: 960px;
+
+$phone: 575px;
+$landPhone: 767px;
+$planshet: 991px;
+$desctop: 1199px;
 /**/
 
-$phone: 600px;
+
 $blue2: #00478a;
 $bluet: rgba(37, 35, 72, 0.65);
 $lite-blue2: #0080ff;

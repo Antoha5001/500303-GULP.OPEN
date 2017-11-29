@@ -46,20 +46,24 @@
 <!--		<img src="../images/close.svg" alt="">-->
 <!--	</a>-->
 </div>
-<div class="wrapper s-conteiner">
-    <header class="row">
-        <div class="col col-lg-6  col-md-12 logo-box">
-            <a href="index.php" class="logo-box__logo">
-                <img src="images/logo.svg" alt=""/>
-            </a>
-        </div>
-        <div class="col col-lg-6 col-md-12">
-            <div class="phone-top">
-                <p class="phone-top__title">МНОГОКАНАЛЬНЫЙ ТЕЛЕФОН</p>
-                <p class="phone-top__kod-goroda">+7 (3852) <span class="phone-top__kod-goroda phone-top__number">50-03-03</span>
-                </p>
-                <p class="phone-top__adres">
-                    г. Барнаул, ул.&nbsp;Партизанская,&nbsp;169</p>
-            </div>
-        </div>
-    </header>
+
+    <div class="container-fluid s-conteiner">
+		<div class="container top-line">
+			<div class="row">
+				<div class="col-12 col-lg-6 logo-box">
+					<a href="index.php" class="logo-box__logo">
+						<img src="images/logo.svg" alt=""/>
+					</a>
+				</div>
+				<div class="col-12 col-lg-6 ">
+					<div class="phone-top">
+						<p class="phone-top__title">МНОГОКАНАЛЬНЫЙ ТЕЛЕФОН</p>
+						<p class="phone-top__kod-goroda">+7 (3852) <span class="phone-top__kod-goroda phone-top__number">50-03-03</span>
+						</p>
+						<p class="phone-top__adres">
+							г. Барнаул, ул.&nbsp;Партизанская,&nbsp;169</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
