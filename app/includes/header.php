@@ -11,9 +11,9 @@
 	<meta property="og:image" content="path/to/image.jpg">
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 	<link rel="icon" href="images/favicon.png" type="image/x-icon">
-	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+<!--	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">-->
+<!--	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">-->
+<!--	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">-->
 
     <link rel="stylesheet" type="text/css" href="css/mystyle.min.css">
     <title>Медицинский центр «ЖИЗНЬ»</title>
@@ -48,8 +48,8 @@
 </div>
 
     <div class="container-fluid s-conteiner">
-		<div class="container top-line">
-			<div class="row">
+<!--		<div class="container top-line">-->
+			<div class="row top-line">
 				<div class="col-12 col-lg-6 logo-box">
 					<a href="index.php" class="logo-box__logo">
 						<img src="images/logo.svg" alt=""/>
@@ -65,5 +65,5 @@
 					</div>
 				</div>
 			</div>
-		</div>
+<!--		</div>-->
 

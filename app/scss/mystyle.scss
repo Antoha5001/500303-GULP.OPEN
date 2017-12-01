@@ -38,7 +38,7 @@ a {
 
 .s-conteiner {
 	@include conteiner( 'menu.jpg');
-	padding-bottom: 120px;
+	//padding-bottom: 120px;
 	@media (max-width: $planshet) and (min-width: 580px) {
 		@include conteiner( 'menu-s.jpg');
 	}
@@ -136,7 +136,7 @@ a {
 .price-box__price {
 	//@include price(300px, 120px, 'price-s.png');
 		// @include price(550px, 220px, 'price.png');
-		 margin: auto;
+		 margin: 0 auto 100px;
 		 width: 100%;
 		 max-width: 550px;
 	/*@media (min-width: $planshet) {

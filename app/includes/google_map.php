@@ -1,7 +1,4 @@
-<style>
 
-
-</style>
 <section class="google-map">
 
 	<div class="container-fluid" id="map">
@@ -9,7 +6,7 @@
 	</div>
 
 	<div class="contacts">
-		<h3 class="contacts-title">Контакты:</h3>
+		<h3 class="contacts-title">Контакты</h3>
 
 		<h4 class="contacts-name">Медицинский центр «ЖИЗНЬ»</h4>
 
@@ -23,7 +20,6 @@
 		</div>
 	</div>
 
-	</div>
 
 	<!--<div class="container-fluid abso">-->
 	<!--<div class="container"></div>-->
