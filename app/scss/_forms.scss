@@ -55,6 +55,8 @@
   margin: auto;
   max-width: 1000px;
   background: $lite-blue2;
+  background: linear-gradient(to top, #0080FF, #00BBFF);
+
   @include bradius(15px);
   @media (min-width: 1280px) {
     //max-width: 1000px;

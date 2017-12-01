@@ -3,21 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="99f4fa7d-5faa-471a-92b8-73ec3e7da2e3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/.hta.ccess" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/.htacce.ss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/images/email.svg" afterPath="$PROJECT_DIR$/app/images/email.svg" />
-      <change beforePath="$PROJECT_DIR$/app/images/instagram.svg" afterPath="$PROJECT_DIR$/app/images/instagram.svg" />
-      <change beforePath="$PROJECT_DIR$/app/images/location.svg" afterPath="$PROJECT_DIR$/app/images/location.svg" />
-      <change beforePath="$PROJECT_DIR$/app/images/phone.svg" afterPath="$PROJECT_DIR$/app/images/phone.svg" />
-      <change beforePath="$PROJECT_DIR$/app/images/vk.svg" afterPath="$PROJECT_DIR$/app/images/vk.svg" />
-      <change beforePath="$PROJECT_DIR$/app/includes/google_map.php" afterPath="$PROJECT_DIR$/app/includes/google_map.php" />
-      <change beforePath="$PROJECT_DIR$/app/includes/header.php" afterPath="$PROJECT_DIR$/app/includes/header.php" />
       <change beforePath="$PROJECT_DIR$/app/scss/_forms.scss" afterPath="$PROJECT_DIR$/app/scss/_forms.scss" />
-      <change beforePath="$PROJECT_DIR$/app/scss/_header.scss" afterPath="$PROJECT_DIR$/app/scss/_header.scss" />
-      <change beforePath="$PROJECT_DIR$/app/scss/_library.scss" afterPath="$PROJECT_DIR$/app/scss/_library.scss" />
-      <change beforePath="$PROJECT_DIR$/app/scss/_map.scss" afterPath="$PROJECT_DIR$/app/scss/_map.scss" />
-      <change beforePath="$PROJECT_DIR$/app/scss/mystyle.scss" afterPath="$PROJECT_DIR$/app/scss/mystyle.scss" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,7 +25,7 @@
           <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
+                <state relative-caret-position="255">
                   <caret line="15" column="3" lean-forward="false" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
                   <folding />
                 </state>
@@ -49,8 +35,8 @@
           <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/includes/header.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+                <state relative-caret-position="391">
+                  <caret line="23" column="26" lean-forward="true" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
                   <folding />
                 </state>
               </provider>
@@ -163,8 +149,8 @@
           <file leaf-file-name="_forms.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/scss/_forms.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="71" column="17" lean-forward="false" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+                <state relative-caret-position="323">
+                  <caret line="57" column="45" lean-forward="false" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
                   <folding />
                 </state>
               </provider>
@@ -230,8 +216,8 @@
         <option value="$PROJECT_DIR$/app/scss/mystyle.scss" />
         <option value="$PROJECT_DIR$/app/includes/google_map.php" />
         <option value="$PROJECT_DIR$/app/scss/_library.scss" />
-        <option value="$PROJECT_DIR$/app/scss/_forms.scss" />
         <option value="$PROJECT_DIR$/app/includes/header.php" />
+        <option value="$PROJECT_DIR$/app/scss/_forms.scss" />
       </list>
     </option>
   </component>
@@ -260,8 +246,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="54" />
-    <option name="y" value="89" />
+    <option name="x" value="-864" />
+    <option name="y" value="67" />
     <option name="width" value="1561" />
     <option name="height" value="948" />
   </component>
@@ -284,6 +270,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -312,7 +299,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -453,6 +439,7 @@
       <workItem from="1512016500836" duration="1755000" />
       <workItem from="1512042077900" duration="593000" />
       <workItem from="1512098742841" duration="2960000" />
+      <workItem from="1512130122770" duration="692000" />
     </task>
     <task id="LOCAL-00001" summary="metrika">
       <created>1511769345783</created>
@@ -465,10 +452,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109395000" />
+    <option name="totallyTimeSpent" value="110087000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="89" width="1561" height="948" extended-state="0" />
+    <frame x="-864" y="67" width="1561" height="948" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -478,7 +465,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13191205" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1332445" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -884,17 +871,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scss/_forms.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="71" column="17" lean-forward="false" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="255">
           <caret line="15" column="3" lean-forward="false" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
           <folding />
         </state>
@@ -902,8 +881,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/includes/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="391">
+          <caret line="23" column="26" lean-forward="true" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scss/_forms.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="57" column="45" lean-forward="false" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
           <folding />
         </state>
       </provider>
