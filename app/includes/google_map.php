@@ -8,9 +8,9 @@
 	<div class="contacts">
 		<h3 class="contacts-title">Контакты</h3>
 
-		<h4 class="contacts-name">Медицинский центр «ЖИЗНЬ»</h4>
+		<p class="contacts-org">Медицинский центр «ЖИЗНЬ»</p>
 
-		<p class="contacts-location">г. Барнаул ул. Партизанская, 169</p>
+		<p class="contacts-location">г. Барнаул ул.&nbspПартизанская,&nbsp169</p>
 		<p class="contacts-phone">+7 (3852) 50-03-03</p>
 		<p class="contacts-email">e-mail: info@500303.ru</p>
 

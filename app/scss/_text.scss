@@ -1,13 +1,16 @@
 @include font-face("nautilys", "../fonts/nautiluspompilius");
-@include font-face("Open Sans", "../fonts/OpenSans-Regular");
-@include font-face("Open Sans Bold", "../fonts/OpenSans-Bold");
+@include font-face("FiraSans", "../fonts/FiraSans-Regular");
+@include font-face("FiraSans Bold", "../fonts/FiraSans-Bold");
 
 h1{
   font-size: 42px;
-  font-family: "Open Sans Bold", sans-serif;
   color: #00bbff;
   margin-top: 1em;
   margin-bottom: 1em;
+}
+h1,h2,h3,h4{
+
+  font-family: "FiraSans Bold", sans-serif;
 }
 
 .content-box{
@@ -20,8 +23,9 @@ h1{
   h1{
   }
   p,a{
-    margin-top: 1em;
+    //margin-top: 1em;
     padding:0 15px;
+    font-family: "FiraSans", sans-serif;
   }
   ul{
     margin-left: 2em;
@@ -46,4 +50,30 @@ h1{
   @media screen and (max-width: $planshet){
     padding: 0 20px 20px;
   }
+}
+
+/**
+* TEXT (mystyle.scss)
+*/
+.pardon__title {
+  font-family: "FiraSans Bold",sans-serif;
+  font-size: 1.4em;
+  color: $black;
+}
+
+.pardon__paragraf {}
+
+.link {
+  text-decoration: underline;
+  color: black;
+  transition: color 0.5s;
+}
+
+.link:hover {
+  color: $lite-blue2;
+}
+
+
+.is-visible{
+  opacity: 1;
 }

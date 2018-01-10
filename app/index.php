@@ -2,36 +2,56 @@
 
 
 <?php
-include "includes/header.php";
+	include "includes/header.php";
 ?>
 <?php
-$id = $_GET["id"];
-switch ($id){
-    case "page1":include "includes/agreement.php"; break;
-    case "test":include "includes/test.php"; break;
-    default:include "includes/home.php";
-}
- ?>
+	$id = $_GET["id"];
+	switch ($id) {
+		case "page1":
+			include "includes/agreement.php";
+			break;
+		case "test":
+			include "includes/test.php";
+			break;
+		default:
+			include "includes/home.php";
+	}
+?>
 
 </div>
 <div class="container-fluid form-box">
-    <div class="col col-lg-12">
-        <form class="form-box__form validate" action="script/form.php" method="post" id="top_form">
-            <h3 class="form-box__zagolovok">Закажите звонок!</h3>
-            <p class="form-box__podzagolovok">Отправте свой номер телефона и наш менеджер свяжится с Вами в
-                ближайшее время. </p>
+	<div class="container">
+		<div class="row">
+			<div class="col col-lg-12 ">
+				<div class="form-box__form">
+					<div class="nurse-box">
+						<img src="images/nurse.png" alt="">
+					</div>
+					<div class="field-box">
+						<form class=" validate" action="script/form.php" method="post" id="top_form">
+							<h3 class="form-box__zagolovok">Закажите звонок!</h3>
+							<p class="form-box__podzagolovok">Отправте свой номер телефона и наш менеджер <br>свяжится с Вами в
+								ближайшее время. </p>
 
-            <span class="form-box__input-name">Как к Вам обращаться?</span>
-            <input class="form-box__input" type="text" placeholder="" name="name" required>
-            <span class="form-box__input-name">Номер телефона</span>
-            <input class="form-box__input" type="tel" placeholder="+7" name="phone" required>
-            <!--                    <input class="form-box__input" type="text" name="coments" value="коментарий">-->
-            <input class="form-box__submit" type="submit" value="Заказать звонок!" name="submit">
-        </form>
-    </div>
+							<span class="form-box__input-name">Как к Вам обращаться?</span>
+							<input class="form-box__input" type="text" placeholder="" name="name" required>
+							<span class="form-box__input-name">Номер телефона</span>
+							<input class="form-box__input" type="tel" placeholder="+7" name="phone" required>
+							<!--                    <input class="form-box__input" type="text" name="coments" value="коментарий">-->
+							<input class="form-box__submit" type="submit" value="Заказать звонок!" name="submit">
+						</form>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
 </div>
 
-<?php include "includes/google_map.php"?>
+<?php include "includes/google_map.php" ?>
+
 <div class="container">
 	<div class="row">
 		<div class="col-12 slogan-box">
@@ -65,21 +85,49 @@ switch ($id){
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTlw8BVagQlIJ8nW5IV2kMazWA7aQvPYs&callback=initMap">
 </script>
 
-<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter46792473 = new Ya.Metrika({ id:46792473, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/46792473" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript"> (function (d, w, c) {
+		(w[c] = w[c] || []).push(function () {
+			try {
+				w.yaCounter46792473 = new Ya.Metrika({
+					id: 46792473,
+					clickmap: true,
+					trackLinks: true,
+					accurateTrackBounce: true
+				});
+			} catch (e) {
+			}
+		});
+		var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () {
+			n.parentNode.insertBefore(s, n);
+		};
+		s.type = "text/javascript";
+		s.async = true;
+		s.src = "https://mc.yandex.ru/metrika/watch.js";
+		if (w.opera == "[object Opera]") {
+			d.addEventListener("DOMContentLoaded", f, false);
+		} else {
+			f();
+		}
+	})(document, window, "yandex_metrika_callbacks"); </script>
+<noscript>
+	<div><img src="https://mc.yandex.ru/watch/46792473" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript>
 <!-- /Yandex.Metrika counter -->
 
-<!-- <script>window.jQuery || document.write('<script src="script/jquery.js"><\/script>')</script> --><script>
+<!-- <script>window.jQuery || document.write('<script src="script/jquery.js"><\/script>')</script> -->
+<script>
 	function initMap() {
 		var element = document.getElementById('map'),
 			doc = document.documentElement,
 			center;
 
-		if(doc.clientWidth < 992){
+		if (doc.clientWidth < 992) {
 			center = {
 				lat: 53.333846,
 				lng: 83.770396
 			}
-		} else{
+		} else {
 			center = {
 				lat: 53.3335472,
 				lng: 83.7672569
@@ -87,30 +135,30 @@ switch ($id){
 		}
 
 		var options = {
-			zoom:17,
+			zoom: 17,
 			gestureHandling: 'cooperative',
 			scrollwheel: false,
 			// mapTypeControlOptions: false,
 			center: center,
 
 		};
-		var myMap = new google.maps.Map(element,options);
+		var myMap = new google.maps.Map(element, options);
 
 		var icon = {
-			url:"images/map-icon.png",
-			size: new google.maps.Size(60,86),
-			scaledSize: new google.maps.Size( 60, 86 ),
-			origin: new google.maps.Point( 0, 0 ),
-			anchor: new google.maps.Point( 30, 86 )
+			url: "images/map-icon.png",
+			size: new google.maps.Size(60, 86),
+			scaledSize: new google.maps.Size(60, 86),
+			origin: new google.maps.Point(0, 0),
+			anchor: new google.maps.Point(30, 86)
 
 		}
 
 		var marker = new google.maps.Marker({
-			position : {
+			position: {
 				lat: 53.333846,
 				lng: 83.770396
 			},
-			map : myMap,
+			map: myMap,
 			// icon: "images/map-icon.svg"
 			icon: icon
 			// animation: google.maps.Animation.DROP
@@ -118,14 +166,12 @@ switch ($id){
 		});
 
 
-
-
 		var infoWindow = new google.maps.InfoWindow({
-			content:"<h2>Медицинский центр «Жизнь»</h2>"
+			content: "<h2>Медицинский центр «Жизнь»</h2>"
 		});
 
 		marker.addListener('click', function () {
-			infoWindow.open(myMap,marker);
+			infoWindow.open(myMap, marker);
 		});
 	}
 </script>

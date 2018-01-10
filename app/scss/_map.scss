@@ -31,6 +31,10 @@
   padding: 20px;
   border-radius: 3px;
 
+  @media screen and (max-width: $desctop){
+
+    left: 80px;
+  }
   @media screen and (max-width: $planshet){
     position: static;
     width: 100%;
@@ -43,16 +47,20 @@
   font-weight: bold;
   @media screen and (max-width: $planshet){
     text-align: center;
+    font-size: 45px;
   }
 
 }
-.contacts .contacts-name{
+.contacts .contacts-org{
   font-size: 30px;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 30px;
   color: $green;
+  line-height: 1.3;
   @media screen and (max-width: $planshet){
     text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
   }
 }
 .contacts-phone, .contacts-email, .contacts-location{
