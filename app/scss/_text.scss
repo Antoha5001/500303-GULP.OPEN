@@ -1,6 +1,7 @@
 @include font-face("nautilys", "../fonts/nautiluspompilius");
 @include font-face("FiraSans", "../fonts/FiraSans-Regular");
 @include font-face("FiraSans Bold", "../fonts/FiraSans-Bold");
+@include font-face("FiraSans Medium", "../fonts/FiraSans-Medium");
 
 h1{
   font-size: 42px;
@@ -11,6 +12,9 @@ h1{
 h1,h2,h3,h4{
 
   font-family: "FiraSans Bold", sans-serif;
+}
+label{
+  margin: 0;
 }
 
 .content-box{
@@ -24,8 +28,9 @@ h1,h2,h3,h4{
   }
   p,a{
     //margin-top: 1em;
-    padding:0 15px;
+    //padding:0 15px;
     font-family: "FiraSans", sans-serif;
+    margin: 0;
   }
   ul{
     margin-left: 2em;

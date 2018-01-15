@@ -20,6 +20,7 @@ var gulp           = require('gulp'),
 // Плагины
 var jsLibs = [
 	'app/script/jquery.js',
+	'app/script/jquery.inputmask.bundle.min.js',
 	'app/script/tether.min.js',
 	'app/script/bootstrap.min.js',
 	'app/libs/modernizr/modernizr-custom.js',
@@ -28,6 +29,7 @@ var jsLibs = [
 var jsMy = [
 	// 'app/script/2gis.js',
 	'app/script/map.js',
+	'app/script/validate.js',
 	'app/script/myscript.js'
 ];
 
