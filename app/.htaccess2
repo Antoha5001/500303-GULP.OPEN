@@ -1,22 +1,20 @@
 
-AddDefaultCharset UTF-8
-php_flag magic_quotes_gpc Off
-php_flag magic_quotes_runtime Off
-php_flag register_globals Off
-
-Options -Indexes
+AddDefaultCharset utf-8
 
 <IfModule mod_rewrite.c>
-
+RewriteEngine on
+RewriteBase /
 
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTPS/
 RewriteRule ^index\.php$ https://500303.ru/ [R=301,L]
 
-RewriteEngine on
-RewriteBase /
 
-RewriteCond %{HTTP_HOST} ^www\.500303\.ru [NC]
-RewriteRule ^(.*)$ http://500303.ru/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.500303\.ru$ [NC]
+RewriteRule ^(.*)$ https://500303.ru/$1 [R=301,L]
+RewriteCond %{HTTPS} =on
+RewriteRule ^(.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 </IfModule>
 
 <ifModule mod_headers.c>
