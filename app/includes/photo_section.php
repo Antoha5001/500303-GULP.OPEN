@@ -7,11 +7,11 @@
                         <div class="photo-section_about">
                             <h2 class="photo-section_about-title">Медицинский центр «ЖИЗНЬ» </h2>
 
-                            <p>Многопрофильная современная
-                                клиника для тех, кто ценит свое
+                            <p>Многопрофильная современная<br>
+                                клиника для тех, кто ценит свое<br>
                                 здоровье и время.</p>
 
-                            <p>Наша цель – не только лечение,
+                            <p>Наша цель – не только лечение,<br>
                                 а профилактика болезней и ранняя
                                 диагностика. </p>
 
@@ -47,7 +47,7 @@
                     <img src="images/photos/right-col_photo.jpg" alt="">
                 </div>
                 <a href="index.php?id=photos" class="photo-section-right_link">
-                    <span>Смотреть<br> все фотографии</span>
+                    <span class="photo-section-right_link-text">Смотреть<br> все фотографии</span>
                 </a>
             </div>
         </div>
