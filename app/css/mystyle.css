@@ -6273,7 +6273,6 @@ input[type="checkbox"] {
           align-items: center;
   color: #fff;
   background: #00D9C0;
-  height: 125px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
   color: #fff;
@@ -9185,6 +9184,27 @@ a {
     margin-top: 32px;
   }
 
+  .photo-section-right_top-photo {
+    margin-top: 32px;
+    height: 523px;
+  }
+
+  .photo-section-right_top-photo img {
+    height: 100%;
+  }
+
+  .photo-section_bottom-photo {
+    height: 334px;
+  }
+
+  .photo-section_bottom-photo img {
+    width: 100%;
+  }
+
+  .photo-section-right_link {
+    height: 102px;
+  }
+
   .photo-section-right_link span::before {
     width: 48px;
     height: 42px;
@@ -10282,34 +10302,6 @@ a {
   }
 }
 
-@media screen and (min-width: 1199px) {
-  .photo-section-wraper {
-    padding: 40px 0;
-  }
-
-  .photo-section_about {
-    height: 385px;
-  }
-
-  .photo-section_about p {
-    font-size: 16px;
-  }
-
-  .photo-section_square-photo {
-    height: 350px;
-    margin-top: 35px;
-  }
-
-  .photo-section-right_link span::before {
-    width: 57px;
-    height: 50px;
-  }
-
-  .photo-section_about-title {
-    font-size: 30px;
-  }
-}
-
 @media (min-width: 1200px) {
   .container {
     padding-right: 15px;
@@ -11393,21 +11385,47 @@ a {
   }
 }
 
-@media (max-width: 1199px) {
-  .navbar-toggleable-lg .navbar-nav .dropdown-menu {
-    position: static;
-    float: none;
+@media screen and (min-width: 1200px) {
+  .photo-section-wraper {
+    padding: 40px 0;
   }
 
-  .navbar-toggleable-lg > .container {
-    padding-right: 0;
-    padding-left: 0;
+  .photo-section_about {
+    height: 385px;
   }
 
-  .hidden-lg-down {
-    display: none !important;
+  .photo-section_about p {
+    font-size: 16px;
   }
 
+  .photo-section_square-photo {
+    height: 350px;
+    margin-top: 35px;
+  }
+
+  .photo-section-right_top-photo {
+    height: auto;
+  }
+
+  .photo-section_bottom-photo {
+    height: auto;
+  }
+
+  .photo-section-right_link {
+    height: 125px;
+  }
+
+  .photo-section-right_link span::before {
+    width: 57px;
+    height: 50px;
+  }
+
+  .photo-section_about-title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
   .form-box {
     padding: 55px 0 40px;
   }
@@ -11439,9 +11457,25 @@ a {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .contacts {
     left: 80px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .navbar-toggleable-lg .navbar-nav .dropdown-menu {
+    position: static;
+    float: none;
+  }
+
+  .navbar-toggleable-lg > .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .hidden-lg-down {
+    display: none !important;
   }
 }
 

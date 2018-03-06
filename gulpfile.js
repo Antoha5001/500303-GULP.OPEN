@@ -56,7 +56,7 @@ gulp.task('browser-sync',['js','css-libs'], function() {
 			baseDir: '500303_GULP'
 		},*/
 		proxy:srv,
-		notify: false
+		notify: true
 		// tunnel: true,
 		// tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
 	});
@@ -90,7 +90,8 @@ gulp.task('css-libs',['sass'], function(){
 
 gulp.task('watch', ['css-libs', 'js', 'browser-sync'], function() {
 	gulp.watch('app/scss/**/*.scss', ['css-libs']);
-	gulp.watch(['app/script/**/*.js', 'app/script/common.min.js'], ['js']);
+	// gulp.watch(['app/script/**/*.js', 'app/script/common.min.js'], ['js']);
+	gulp.watch('app/script/**/*.js', ['js']);
 	//gulp.watch('500303_GULP/*.php', browserSync.reload);
 	gulp.watch('app/**/*.php').on('change', browserSync.reload);
 });
