@@ -9,33 +9,7 @@
 		$dark_green = "#397556",
 		$dark_green2 = "#1E3D2D";
 
-	function PhotoQuery(settings) {
-		// this.wrapper = settings.wrapper;
-		this.wrapper = settings.wrapper;
-		this.img = this.wrapper.getElementsByTagName('img')[0];
-		this.img_src = this.wrapper.getElementsByTagName('img')[0].src;
 
-
-		this.getName = function () {
-
-		}
-		if(window.matchMedia("(min-width: 1100px)").matches){
-
-			console.log(this.img_src);
-		}
-	}
-
-
-	var photo_bottom = document.getElementsByClassName('photo-section-right_top-photo')[0];
-
-	if(photo_bottom){
-
-		var photo_bottom_obj = new PhotoQuery({
-			wrapper : photo_bottom
-		});
-
-		photo_bottom_obj.getName();
-	}
 
 
 	var logo = document.getElementsByClassName("logo-box__logo")[0],
@@ -49,6 +23,7 @@
 	if (!Modernizr.svg) {
 		logoImage.src = "images/logo.png";
 	}
+
 
 	//Photos
 	var photoWrapper = document.getElementById('photos-wrapper'),

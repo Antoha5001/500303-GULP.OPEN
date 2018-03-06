@@ -30,6 +30,7 @@ var jsMy = [
 	// 'app/script/2gis.js',
 	'app/script/map.js',
 	'app/script/validate.js',
+	'app/script/PhotoQuery.js',
 	'app/script/myscript.js'
 ];
 

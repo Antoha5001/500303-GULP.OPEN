@@ -1,18 +1,18 @@
 <section class="container-fluid photo-section">
     <div class="container photo-section-wraper">
         <div class="row">
-            <div class="col col-lg-8 photo-section-left">
+            <div class="col col-lg-8 col-md-12 photo-section-left">
                 <div class="row photo-section_top-row">
-                    <div class="col col-lg-6">
+                    <div class="col col-lg-6  col-md-12  col-12">
                         <div class="photo-section_about">
                             <h2 class="photo-section_about-title">Медицинский центр «ЖИЗНЬ» </h2>
 
-                            <p>Многопрофильная современная<br>
-                                клиника для тех, кто ценит свое<br>
+                            <p>Многопрофильная современная
+                                клиника для тех, кто ценит свое
                                 здоровье и время.</p>
 
-                            <p>Наша цель – не только лечение,<br>
-                                а профилактика болезней и ранняя
+                            <p>Наша цель – не только лечение,
+                                а&nbsp;профилактика болезней и ранняя
                                 диагностика. </p>
 
                             <p>Консультации высококвалифицированных
