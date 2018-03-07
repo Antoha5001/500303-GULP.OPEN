@@ -30,27 +30,30 @@
 					<div class="field-box">
 						<form class=" validate" action="" method="post" id="top_form">
 							<h3 class="form-box__zagolovok">Закажите звонок!</h3>
-							<p class="form-box__podzagolovok">Отправте свой номер телефона и наш менеджер <br>свяжится с Вами в
+							<p class="form-box__podzagolovok">Отправте свой номер телефона и наш менеджер <br>свяжится с
+								Вами в
 								ближайшее время. </p>
 
 							<!--Name input -->
 							<div class="form-box__input-wrapper">
 								<label for="form_name" class="form-box__input-name">Как к вам обращаться</label>
 								<input class="form-box__input" type="text" placeholder="" name="name" id="form_name"
-										 data-error="Не верный формат записи!">
+									   data-error="Не верный формат записи!">
 								<div class="message">Вы не ввели имя!</div>
 							</div>
 
 							<!--Phone input -->
 							<div class="form-box__input-wrapper">
 								<label for="form_phone" class="form-box__input-name">Номер телефона</label>
-								<input class="form-box__input" type="tel" placeholder="+7" name="phone" id="form_phone" data-error="">
+								<input class="form-box__input" type="tel" placeholder="+7" name="phone" id="form_phone"
+									   data-error="">
 								<div class="message">Вы не указали телефон!</div>
 							</div>
 
 							<!--Checkbox input -->
 							<div class="form-box__input-wrapper">
-								<label for="agreed" class="form-box__agreed">Я принимаю <a href="index.php?id=page1">условия на
+								<label for="agreed" class="form-box__agreed">Я принимаю <a href="index.php?id=page1">условия
+										на
 										обработку персональных
 										данных!</a></label>
 								<input type="checkbox" name="agreed" id="agreed">
@@ -59,10 +62,11 @@
 
 							<!--Button-->
 							<div class="">
-<!--									<label class="form-legend"></label>-->
-									<input type="submit" class="form-box__submit" value="Заказать звонок!" id="form-box__submit">
+								<!--									<label class="form-legend"></label>-->
+								<input type="submit" class="form-box__submit" value="Заказать звонок!"
+									   id="form-box__submit">
 							</div>
-<!--							<input class="form-box__submit" type="submit" value="Заказать звонок!" name="submit">-->
+							<!--							<input class="form-box__submit" type="submit" value="Заказать звонок!" name="submit">-->
 						</form>
 					</div>
 
@@ -74,8 +78,11 @@
 	</div>
 </div>
 
-<?php include "includes/photo_section.php" ?>
-<?php include "includes/google_map.php" ?>
+<?php
+	if ($_GET['id'] !== "photos") {
+		include "includes/photo_section.php";
+	} ?>
+<?php include "includes/google_map.php"; ?>
 
 <div class="container">
 	<div class="row">

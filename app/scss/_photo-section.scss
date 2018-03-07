@@ -28,9 +28,9 @@
   background: $green-logo-2;
   border-radius: 5px;
   padding: 12px;
+  margin-top: 30px;
   @media screen and (min-width: $landPhone) {
     width: 100%;
-    margin-top: 30px;
     height: auto;
     padding: 12px 12px 2px;
   }
@@ -58,8 +58,10 @@
   overflow: hidden;
   border-radius: 5px;
   margin-top: 30px;
+  height: 335px;
   @media screen and (min-width: $planshet) {
     margin-top: 32px;
+    height: auto;
   }
   @media screen and (min-width: $desctop) {
     height: 350px;
@@ -71,13 +73,30 @@
 }
 
 .photo-section_bottom-photo {
-  height: 400px;
   overflow: hidden;
   border-radius: 5px;
+  height: 335px;
+  @media screen and (min-width: $planshet) {
+    height: 400px;
+
+}
+  @media screen and (min-width: $desctop) {
+
+  }
+  img{
+    @media screen and (min-width: $planshet) {
+
+      width: 100%;
+      margin: auto;
+
+    }
+
+  }
 }
 
 .photo-section-right_top-photo {
 
+  height: 335px;
   margin-top: 35px;
   overflow: hidden;
   border-radius: 5px;
@@ -98,6 +117,7 @@
 
 .photo-section_bottom-photo {
 
+  height: 335px;
   @media screen and (min-width: $planshet) {
     height: 334px;
 
@@ -128,7 +148,7 @@
     height: 102px;
   }
   @media screen and (min-width: $desctop) {
-    height: 125px;
+    height: 126px;
 
   }
   &:hover {

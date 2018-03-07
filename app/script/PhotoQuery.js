@@ -19,8 +19,8 @@
             window.addEventListener("resize",function (ev) {
                 if(parseInt(window.innerWidth) <= 991){
 
-                    console.log(doc.clientWidth);
-                    console.log(window.innerWidth);
+                    // console.log(doc.clientWidth);
+                    // console.log(window.innerWidth);
                     self.img.src = settings.smallPhoto;
                 } else {
 
@@ -34,13 +34,34 @@
         }
 
 
-        var photo_bottom = document.getElementsByClassName('photo-section-right_top-photo')[0];
+        var right_top_photo = document.getElementsByClassName('photo-section-right_top-photo')[0];
+        var left_bottom_photo = document.getElementsByClassName('photo-section_bottom-photo')[0];
+        var left_top_photo = document.getElementsByClassName('photo-section_square-photo')[0];
 
-        if(photo_bottom){
+        if(right_top_photo){
 
             var photo_bottom_obj = new PhotoQuery({
-                wrapper : photo_bottom,
-                smallPhoto : "../images/photos/photo-1.jpg"
+                wrapper : right_top_photo,
+                smallPhoto : "../images/photos/right-col_photo_tablets.jpg"
+            });
+
+            photo_bottom_obj.getName();
+        }
+
+        if(left_bottom_photo){
+
+            var photo_bottom_obj = new PhotoQuery({
+                wrapper : left_bottom_photo,
+                smallPhoto : "../images/photos/hall_tablets.jpg"
+            });
+
+            photo_bottom_obj.getName();
+        }
+        if(left_top_photo){
+
+            var photo_bottom_obj = new PhotoQuery({
+                wrapper : left_top_photo,
+                smallPhoto : "../images/photos/photo-1_tablets.jpg"
             });
 
             photo_bottom_obj.getName();
