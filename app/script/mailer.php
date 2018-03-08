@@ -13,7 +13,8 @@
 		//Имя сервера
 		$host = "Host: www.".$_SERVER["HTTP_HOST"]."<br>";
 
-		$to = 'plantsvzzombi@mail.ru';
+        $to  = 'photo@623030.ru' . ', '; // обратите внимание на запятую
+        $to .= '3852@623030.ru';
 
 		$zagolovok = "Заявка на звонок";
 

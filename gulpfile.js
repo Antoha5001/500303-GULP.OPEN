@@ -24,6 +24,7 @@ var jsLibs = [
 	'app/script/tether.min.js',
 	'app/script/bootstrap.min.js',
 	'app/libs/modernizr/modernizr-custom.js',
+    'app/script/jquery.fancybox.min.js',
 	'app/script/common.min.js'
 ];
 var jsMy = [
@@ -82,7 +83,7 @@ gulp.task('sass', function () {
 }); // инструкция, задача
 
 gulp.task('css-libs',['sass'], function(){
-	return gulp.src(['app/css/mystyle.css',])
+	return gulp.src(['app/css/mystyle.css'])
 				.pipe(cssnano())
 				.pipe(rename({suffix:'.min'}))
 				.pipe(gulp.dest('app/css'))

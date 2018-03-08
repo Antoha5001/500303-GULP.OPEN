@@ -136,17 +136,19 @@
   width: 100%;
   margin: auto;
   color: $blue2;
-  color: white;
-  font-size: 50px;
+  color: white; font-size: 41px;
   line-height: 1.2em;
   font-weight: 800;
-  @media (max-width: $desctop) {
-    font-size: 41px;
-  }
-  @media (max-width: $planshet) {
+  @media screen and (min-width: $planshet) {
     line-height: 1em;
     font-size: 41px;
+}
+  @media screen and (min-width: $desctop) {
+margin-top: 15px;
+    font-size: 50px;
   }
+
+
 
 }
 
