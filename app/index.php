@@ -5,7 +5,15 @@
 	include "includes/header.php";
 ?>
 <?php
-	$id = $_GET["id"];
+
+
+//	$id = $_GET["id"] ?? null;
+
+//	if ($id === null ){
+//
+//        include "includes/404.php";
+//    }
+
 	switch ($id) {
 		case "page1":
 			include "includes/agreement.php";
