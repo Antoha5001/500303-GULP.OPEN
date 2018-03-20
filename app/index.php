@@ -1,4 +1,9 @@
-<?php include "modules/form.php"; ?>
+<?php
+	include_once("m/model.php");
+	include_once("c/Controler/Pages.php");
+	include "modules/form.php";
+	$id = $_GET['id'] ?? null;
+?>
 
 
 <?php
@@ -7,22 +12,32 @@
 <?php
 
 
-//	$id = $_GET["id"] ?? null;
+	//	$id = $_GET["id"] ?? null;
 
-//	if ($id === null ){
-//
-//        include "includes/404.php";
-//    }
+	//	if ($id === null ){
+	//
+	//        include "includes/404.php";
+	//    }
 
-	switch ($id) {
-		case "page1":
-			include "includes/agreement.php";
-			break;
-		case "photos":
-			include "includes/test.php";
-			break;
-		default:
-			include "includes/home.php";
+	//	switch ($id) {
+	//		case "page1":
+	//			include "includes/agreement.php";
+	//			break;
+	//		case "photos":
+	//			include "includes/test.php";
+	//			break;
+	//		default:
+	//			include "includes/home.php";
+	//	}
+	if (count($_GET) == 0) {
+
+		include "includes/home.php";
+	} else{
+		if(count($data->xpath("/pages/child::page[@id = '$id']")) > 0){
+			include "includes/$id.php";
+		} else{
+			include "includes/404.php";
+		}
 	}
 ?>
 
@@ -60,7 +75,7 @@
 
 							<!--Checkbox input -->
 							<div class="form-box__input-wrapper">
-								<label for="agreed" class="form-box__agreed">Я принимаю <a href="index.php?id=page1">условия
+								<label for="agreed" class="form-box__agreed">Я принимаю <a href="index.php?id=agreement">условия
 										на
 										обработку персональных
 										данных!</a></label>
@@ -113,7 +128,7 @@
 		</div>
 		<div class="col-12 col-lg-6 ">
 			<div class="s-footer__link">
-				<a href="index.php?id=page1">Cогласие на обработку персональных данных</a>
+				<a href="index.php?id=agreement">Cогласие на обработку персональных данных</a>
 			</div>
 		</div>
 	</div>
