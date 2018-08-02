@@ -18,7 +18,7 @@
 			"$headers");
 		//header("Location: ".$_SERVER['PHP_SELF']);
 
-		header("Location: ../index.php");
+		header("Location: ../index2.php");
 	}
 
 ?>

@@ -43,7 +43,7 @@
         <div class="col col-lg-4 col-md-6 col-12">
             <div class="photo-box">
                 <a data-fancybox="gallery" href="../images/photos/photo-1.jpg">
-                    <img src="../images/photos/photo-1_thumb.jpg">
+                    <img src="./images/photos/photo-1_thumb.jpg">
                 </a>
                 <!--                <img src="../images/photos/photo-1_thumb.jpg" alt="">-->
             </div>
@@ -51,7 +51,7 @@
         <div class="col col-lg-4 col-md-6 col-12 ">
             <div class="photo-box">
                 <a data-fancybox="gallery" href="../images/photos/photo-2.jpg">
-                    <img src="../images/photos/photo-2_thumb.jpg" alt="">
+                    <img src="./images/photos/photo-2_thumb.jpg" alt="">
                 </a>
             </div>
         </div>
@@ -59,7 +59,7 @@
             <div class="photo-box">
 
                 <a data-fancybox="gallery" href="../images/photos/photo-3.jpg">
-                    <img src="../images/photos/photo-3_thumb.jpg" alt="">
+                    <img src="./images/photos/photo-3_thumb.jpg" alt="">
                 </a>
             </div>
         </div>
@@ -68,7 +68,7 @@
             <div class="photo-box">
 
                 <a data-fancybox="gallery" href="../images/photos/photo-4.jpg">
-                    <img src="../images/photos/photo-4_thumb.jpg" alt="">
+                    <img src="./images/photos/photo-4_thumb.jpg" alt="">
                 </a>
             </div>
         </div>

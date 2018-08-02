@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
 	<link rel="icon" href="images/favicon.png" type="image/x-icon">
 <!--	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">-->
 <!--	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">-->

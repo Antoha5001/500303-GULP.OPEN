@@ -1,8 +1,7 @@
 <?php
 	include_once("m/model.php");
 	include_once("c/Controler/Pages.php");
-//	include "modules/form.php";
-//	require_once("modules/form.php");
+	include "modules/form.php";
 	$id = $_GET['id'] ?? null;
 ?>
 
@@ -76,7 +75,7 @@
 
 							<!--Checkbox input -->
 							<div class="form-box__input-wrapper">
-								<label for="agreed" class="form-box__agreed">Я принимаю <a href="index.php?id=agreement">условия
+								<label for="agreed" class="form-box__agreed">Я принимаю <a href="index2.php?id=agreement">условия
 										на
 										обработку персональных
 										данных!</a></label>
@@ -103,18 +102,10 @@
 </div>
 
 <?php
-//if (isset($_GET['id'])){
-//    if (isset($_GET['id']) || $_GET['id'] !== "photos") {
-//        include "includes/photo_section.php";
-//    }
-//}
-if (!isset($_GET['id']) || $_GET['id'] !== "photos") {
-    include "includes/photo_section.php";
-}
-	?>
-<?php include "includes/google_map.php";
-echo isset($_GET['id']);
-?>
+	if ($_GET['id'] !== "photos") {
+		include "includes/photo_section.php";
+	} ?>
+<?php include "includes/google_map.php"; ?>
 
 <div class="container">
 	<div class="row">
@@ -137,7 +128,7 @@ echo isset($_GET['id']);
 		</div>
 		<div class="col-12 col-lg-6 ">
 			<div class="s-footer__link">
-				<a href="index.php?id=agreement">Cогласие на обработку персональных данных</a>
+				<a href="index2.php?id=agreement">Cогласие на обработку персональных данных</a>
 			</div>
 		</div>
 	</div>
