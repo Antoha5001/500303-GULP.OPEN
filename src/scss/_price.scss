@@ -1,0 +1,32 @@
+.price-list__box{
+  padding: 40px 0;
+  justify-content: center;
+}
+.price-list__header{
+  flex-basis: 90%;
+  padding: 15px;
+  background: #00bbff;
+  color: #ffffff;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.price-list__title,
+.price-list__value{
+  padding: 15px;
+  background: #fff;
+  color: #000;
+  font-size: 1.4em;
+  border: 1px solid #00bbff;
+  margin: 0 auto;
+}
+.price-list__title{
+  text-align: left;
+  flex-basis: 60%;
+  margin: 0;
+}
+.price-list__value{
+  flex-basis: 30%;
+  margin: 0;
+  text-align: center;
+}

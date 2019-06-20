@@ -1,0 +1,105 @@
+
+//Зелёный
+$green: #00CC83;
+$green-logo-2: #00D9C0;
+$green-logo-hover: #199381;
+$dark-green:#397556;
+$lite-green: #e8fff3;
+$nice-green: #ccffe4;
+
+$lite-blue: #0080ff;
+$blue: #38baf2;
+$blue_logo: #00bbff;
+
+$image_dir:'../images/';
+
+$phone: 575px;
+$landPhone: 767px;
+$planshet: 991px;
+$desctop: 1200px;
+/**/
+
+
+$blue2: #00478a;
+$temp: #4dd7f4;
+$bluet: rgba(37, 35, 72, 0.65);
+$lite-blue2: #0080ff;
+$nice-blue: #83beff;
+$nice-blue2: #cfe8ff;
+//$lite-bluet: rgba(83, 77, 177, 0.85);
+//$orange: #FFD608;
+//$dorange111: orange - #111;
+//$dorange333: orange - #333;
+$green2: #00ba78;
+$dark-green2: #005c3a;
+$lite-green2: #00cc84;
+$W250: 250px;
+$black: #333333;
+/**/
+
+@mixin border-radius($px) {
+  -webkit-border-radius: $px;
+  -moz-border-radius: $px;
+  border-radius: $px;
+}
+
+@mixin conteiner($background) {
+  //margin: 0 auto;
+//  position: relative;
+  background: url($image_dir+$background) #fff no-repeat;
+  //background-attachment: fixed;
+  background-size: contain;
+ // box-shadow: 0 0 15px #999;
+ // -webkit-box-shadow: 0 0 15px #999;
+//  width: 90%;
+ // -moz-box-shadow: 0 0 15px #999;
+//  width: 90%;
+}
+
+@mixin logo($width, $height, $background) {
+  width: $width;
+  height: $height;
+  background: url($image_dir+$background) no-repeat top center;
+  margin: auto;
+}
+
+@mixin price($width, $height, $background) {
+  width: $width;
+  //height: $height;
+  background: url($image_dir+$background) no-repeat;
+  margin: auto;
+}
+
+@mixin tsize($fsize, $color, $lh) {
+  font-size: $fsize;
+  color: $color;
+  line-height: $lh;
+}
+
+@mixin footer($background) {
+  padding: 10px;
+  min-height: 40px;
+  background: url($image_dir+$background) repeat-x #60C48F;
+  overflow: hidden;
+}
+
+@mixin bradius($atr1) {
+  border-radius: $atr1;
+  -webkit-border-radius: $atr1;
+  -moz-border-radius: $atr1;
+}
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false ){
+  @font-face{
+		font-family: $font-family;
+		font-weight: $weight;
+		font-style: $style;
+  	@if $asset-pipeline == true {
+  		src: font-url('#{$file-path}.eot');
+  		src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.ttf') format('truetype');
+    }
+  	@else{
+  		src: url('#{$file-path}.eot');
+  		src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype');
+    }
+  }
+}

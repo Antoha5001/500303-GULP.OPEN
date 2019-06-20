@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pages>
+    <page id="photos">
+        <!--<id>photos</id>-->
+        <title>Наши фотографии</title>
+        <description>Фотографии Медицинского центра «Жизнь»</description>
+        <canonical></canonical>
+    </page>
+    <page id="index">
+        <title>МЦ «Жизнь»</title>
+        <description>МЦ «Жизнь»</description>
+        <canonical></canonical>
+    </page>
+    <page id="agreement">
+        <title>Cогласие на обработку персональных данных</title>
+        <description>Cогласие на обработку персональных данных</description>
+        <canonical></canonical>
+    </page>
+    <page id="preparing">
+        <title>Подготовка пациента к виртуальной колоноскопии</title>
+        <description>Подготовка пациента к виртуальной колоноскопии</description>
+        <canonical></canonical>
+    </page>
+</pages>

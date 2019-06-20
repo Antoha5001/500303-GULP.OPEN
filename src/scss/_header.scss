@@ -1,0 +1,135 @@
+
+.top-line{
+  //border: 1px solid black;
+  position: relative;
+}
+/*
+*	Logotype
+*/
+.logo-box__logo {
+  display: block;
+  //opacity: 0;
+  transition: opacity 1.5s;
+  margin:{
+    top: 30px;
+    left: 40px;
+  }
+  width: 350px;
+  //height: 200px;
+  overflow: hidden;
+  img{
+    width: 100%;
+  }
+  @media (max-width: $planshet) {
+    width: calc(100% - 40px);
+    height: auto;
+    margin:40px auto;
+  }
+  @media (max-width: $phone) {
+    width: calc(100% - 20px);
+    height: 300px;
+    background-image:url('../images/logo_vert.svg');
+    background-position: top center;
+    background-repeat:no-repeat;
+    margin:40px auto;
+    img{
+      display: none;
+    }
+  }
+}
+
+/* Contacts in header */
+.phone-top {
+  width: 400px;
+  margin-top: 40px;
+  margin-right: 40px;
+  text-align: right;
+  float: right;
+  @media screen and (max-width: $planshet){
+    //border: 1px solid black;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    //line-height: 1.8em;
+  }
+  @media screen and (max-width: $phone){
+    margin-top: -22px;
+  }
+}
+
+.phone-top__title{
+  font-family: "FiraSans Bold",sans-serif;
+  font-size: 18px;
+  color: $green;
+  margin: 0;
+  @media (max-width: $planshet) {
+    font-size: 2.2rem;
+  }
+  @media (max-width: $phone) {
+    font-size: 1.2em;
+  }
+}
+
+.phone-top__adres{
+  font-family: "FiraSans Bold",sans-serif;
+  margin-top: 5px;
+  //top: 4px;
+  font-size: 20px;
+  line-height: 1.4;
+  color: $blue_logo;
+  @media (max-width: $planshet) {
+    font-size: 2.4rem;
+    //line-height: 2.8rem;
+  }
+  @media (max-width: $phone) {
+    font-size: 1.4rem;
+    //line-height: 1.8rem;
+  }
+}
+.phone-top__kod-goroda{
+  font-family: "FiraSans Bold",sans-serif;
+  position: relative;
+  z-index: 1;
+  font-size: 1em;
+  font-weight: bold;
+  top: 5px;
+  color: $green;
+  margin: 0;
+  @media (max-width: $planshet) {
+    font-size: 35px;
+    color: $green;
+    font-weight: bold;
+    line-height: 4rem * 1.6;
+  }
+  @media (max-width: $phone) {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: $green;
+    line-height: 1.4rem ;
+  }
+  @media (max-width: 250px) {
+    @include tsize(0.9em, $green, 1.2em);
+  }
+}
+.phone-top__number{
+  font-family: "FiraSans Bold",sans-serif;
+  position: relative;
+  font-size: 40px;
+  color: $green;
+  top: 2px;
+  margin: 0;
+  @media (max-width: $planshet) {
+    font-size: 60px;
+    top: 2px;
+  }
+  @media (max-width: $phone){
+    font-size: 2.5rem;
+    top: 1px;
+  }
+  @media (max-width: 250px) {
+    //@include tsize(1.2em, $green, 1.2em);
+    position: relative;
+    top: 1px;
+  }
+}

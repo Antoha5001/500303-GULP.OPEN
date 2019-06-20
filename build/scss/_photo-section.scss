@@ -1,0 +1,197 @@
+.photo-section {
+  background: #fff;
+}
+
+.photo-section-wraper {
+
+  @media screen and (min-width: $planshet) {
+
+    padding: 30px 0;
+  }
+  @media screen and (min-width: $desctop) {
+
+    padding: 40px 0;
+  }
+}
+
+.border {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.photo-section_top-row {
+  margin-bottom: 30px;
+}
+
+.photo-section_about {
+  color: #fff;
+  background: $green-logo-2;
+  border-radius: 5px;
+  padding: 12px;
+  margin-top: 30px;
+  @media screen and (min-width: $landPhone) {
+    width: 100%;
+    height: auto;
+    padding: 12px 12px 2px;
+  }
+  @media screen and (min-width: $planshet) {
+    margin-top: 0px;
+    height: 322px;
+  }
+  @media screen and (min-width: $desctop) {
+    height: 385px;
+  }
+  p {
+    line-height: 1.3;
+    font-size: 16px;
+    @media screen and (min-width: $planshet) {
+      font-size: 13px;
+    }
+    @media screen and (min-width: $desctop) {
+      font-size: 16px;
+    }
+  }
+}
+
+.photo-section_square-photo {
+  //width: 350px;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-top: 30px;
+  height: 335px;
+  @media screen and (min-width: $planshet) {
+    margin-top: 32px;
+    height: auto;
+  }
+  @media screen and (min-width: $desctop) {
+    height: 350px;
+    margin-top: 35px;
+  }
+  img {
+    height: 100%;
+    @media screen and (min-width: $planshet) {
+      width: 100%;
+    }
+  }
+}
+
+.photo-section_bottom-photo {
+  overflow: hidden;
+  border-radius: 5px;
+  height: 335px;
+  @media screen and (min-width: $planshet) {
+    height: 400px;
+
+}
+  @media screen and (min-width: $desctop) {
+
+  }
+  img{
+    @media screen and (min-width: $planshet) {
+
+      width: 100%;
+      margin: auto;
+
+    }
+
+  }
+}
+
+.photo-section-right_top-photo {
+
+  height: 335px;
+  margin-top: 35px;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  @media screen and (min-width: $planshet) {
+    margin-top: 32px;
+    height: 523px;
+  }
+  @media screen and (min-width: $desctop) {
+    height: 625px;
+  }
+  img {
+    @media screen and (min-width: $planshet) {
+      height: 100%;
+    }
+  }
+}
+
+.photo-section_bottom-photo {
+
+  height: 335px;
+  @media screen and (min-width: $planshet) {
+    height: 334px;
+
+  }
+  @media screen and (min-width: $desctop) {
+    height: 398px;
+  }
+  img {
+    @media screen and (min-width: $planshet) {
+      width: 100%;
+    }
+  }
+}
+
+.photo-section-right_link {
+  font-family: "FiraSans Medium", sans-serif;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: $green-logo-2;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: underline;
+  height: 102px;
+  transition: all 0.5s cubic-bezier(0.25, .46, .45, .94);
+  @media screen and (min-width: $planshet) {
+    height: 102px;
+  }
+  @media screen and (min-width: $desctop) {
+    height: 126px;
+
+  }
+  &:hover {
+    color: #fff;
+    text-decoration: underline;
+    background: $green-logo-hover;
+  }
+  span {
+    margin-left: 30px;
+    display: inline-block;
+    width: 100%;
+  }
+  span::before {
+    content: "";
+    display: block;
+    background: url("../images/photik.svg");
+    float: left;
+    margin-right: 20px;
+    width: 48px;
+    height: 42px;
+    @media screen and (min-width: $planshet) {
+    }
+    @media screen and (min-width: $desctop) {
+      width: 57px;
+      height: 50px;
+
+    }
+  }
+}
+
+.photo-section_about-title {
+  font-family: "FiraSans Medium", sans-serif;
+  color: $lite-blue;
+  font-size: 30px;
+  line-height: 1.3;
+  margin-bottom: 18px;
+  @media screen and (min-width: $planshet) {
+    font-size: 25px;
+  }
+  @media screen and (min-width: $desctop) {
+    font-size: 30px;
+  }
+}

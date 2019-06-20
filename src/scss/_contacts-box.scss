@@ -1,0 +1,105 @@
+/*CONTACTS*/
+
+/*.contacts-box {
+    height: 400px;
+    background: $lite-green;
+}*/
+//.contacts-wrapper{
+//  padding: 0;
+//  margin: 0;
+//}
+//.contacts-box {
+//  width: 100%;
+//  max-width: none;
+//  background: $lite-green;
+//  overflow: hidden;
+//  margin-top: 0;
+//  padding: 0;
+//  margin: 0 auto;
+//  @media screen and (max-width: $planshet){
+//
+//  }
+//}
+
+//.contacts-box__contacts {
+//  //min-height: 350px;
+//  padding:30px 10px 25px 40px;
+//  //border: 1px solid black;
+//  @media screen and (max-width:$planshet){
+//    padding:20px;
+//
+//  }
+//}
+//
+//.contacts-box__zagolovok {
+//  @include tsize(2rem, $green, 1.5rem);
+//  //	margin-left: 40px;
+//  margin-bottom: 0.5rem;
+//  font-family: "FiraSans Bold",sans-serif;
+//  //padding-top: 15px;
+//  font-weight: bold;
+//  text-align: left;
+//  @media screen and (max-width:$planshet){
+//    @include tsize(1.8rem, $green, 1.5em);
+//    //padding-top: 15px;
+//    font-weight: bold;
+//    text-align: center;
+//    margin-bottom: 0;
+//
+//  }
+//}
+//
+//.contacts-box__podzagolovok {
+//  @include tsize(1.2rem, $black, 1.8rem);
+//  //margin-left: 40px;
+//  text-align: left;
+//  color: red;
+//  @media screen and (max-width:$planshet){
+//    text-align: center;
+//    font-size: 1.3rem;
+//    line-height: 1.5em;
+//
+//  }
+//}
+//.contacts-box__phone {
+//  font-family: "FiraSans Bold",sans-serif;
+//  font-weight: bold;
+//  text-align: left;
+//  font-size: 2.4rem;
+//  color: $black;
+//  @media screen and (max-width:$planshet){
+//    text-align: center;
+//    //font-size: 1.3rem;
+//    line-height: 1.5em;
+//
+//  }
+//  span{
+//    font-size: 1.3rem;
+//    color: #666;
+//  }
+//}
+
+//.contacts-box__podzagolovok_bold {
+//  font-family: "FiraSans Bold",sans-serif;
+//  font-weight: bold;
+//  padding-top: 15px;
+//  @media screen and (max-width:$planshet){
+//
+//  }
+//}
+
+.contacts-box__maps {
+  min-height: 400px;
+  padding: 0;
+  margin: 0;
+  @media screen and (max-width: 960px) {
+    width:100%;
+    margin: 0 20px;
+  }
+}
+
+#map {
+  //width: 100%;
+  //height: 433px;
+  //background: #ccc;
+}
