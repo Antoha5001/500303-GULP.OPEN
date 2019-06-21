@@ -9,6 +9,7 @@ $id = $_GET['id'] ?? null;
 
 <?php
 	include "includes/header.php";
+
 ?>
 <?php
 
@@ -146,7 +147,7 @@ echo isset($_GET['id']);
 <!--<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>-->
 <script type="text/javascript" src="script/script.js"></script>
 <script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTlw8BVagQlIJ8nW5IV2kMazWA7aQvPYs&callback=initMap">
+		src="https://maps.googleapis.com/maps/api/js?key=123&callback=initMap">
 </script>
 
 <!-- Yandex.Metrika counter -->
